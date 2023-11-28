@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://w70xur6qloau"]
+
+[ext_resource type="Script" path="res://items/item.gd" id="1_n5pjw"]
+[ext_resource type="Texture2D" uid="uid://bkyj44n1py03s" path="res://textures/attacks/water splash.png" id="2_c52nv"]
+[ext_resource type="PackedScene" uid="uid://c2ypy34o5iou8" path="res://attacks/water_splash.tscn" id="2_ivt3c"]
+
+[node name="test attack item" type="Node"]
+script = ExtResource("1_n5pjw")
+icon = ExtResource("2_c52nv")
+itemType = 2
+
+[node name="water splash" parent="." instance=ExtResource("2_ivt3c")]
+baseDamage = 100.0
+attackType = 2
+healthCost = 10.0
+manaCost = 50.0
+isSpell = false

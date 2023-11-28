@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfggdm2d7u5mw"]
+
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="1_033hj"]
+[ext_resource type="Texture2D" uid="uid://dsj8ose67k8h1" path="res://textures/attacks/stick beatin'.png" id="2_l6t8s"]
+
+[node name="stick beatin" instance=ExtResource("1_033hj")]
+attackName = "stick beatin'"
+baseDamage = 8.0
+attackType = 6
+variation = 0.5
+icon = ExtResource("2_l6t8s")

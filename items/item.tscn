@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://qrnxe5wc23gd"]
+
+[ext_resource type="Script" path="res://items/item.gd" id="1_k1eai"]
+
+[node name="item" type="Node"]
+script = ExtResource("1_k1eai")
+itemName = "test item"
+itemDescription = "yo mama"
+armorType = 2
+manaChange = -50.0
+healthChange = -25.0
+sanityChange = 7.0

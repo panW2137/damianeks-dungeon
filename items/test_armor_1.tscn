@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dynqotekp5bev"]
+
+[ext_resource type="Script" path="res://items/item.gd" id="1_tpbnh"]
+
+[node name="test armor 1" type="Node"]
+script = ExtResource("1_tpbnh")
+itemType = 1
+itemName = "test armor 1"
+itemDescription = "yo papa sober"
+armorProt = 25.0
+armorType = 5

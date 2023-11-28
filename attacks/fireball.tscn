@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu7twap4478tc"]
+
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="1_ayxsp"]
+[ext_resource type="Texture2D" uid="uid://dwovgl2m4f4lq" path="res://textures/attacks/fireball.png" id="2_0g3bj"]
+
+[node name="fireball" instance=ExtResource("1_ayxsp")]
+attackName = "fireball"
+baseDamage = 15.0
+attackType = 0
+manaCost = 10.0
+variation = 0.25
+icon = ExtResource("2_0g3bj")
+isSpell = true

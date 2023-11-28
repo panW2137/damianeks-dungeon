@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy02m34aggd2r"]
+
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="1_moy0d"]
+[ext_resource type="Texture2D" uid="uid://8hghru1iojnh" path="res://textures/attacks/holy lance.png" id="2_tnxw0"]
+
+[node name="holy lance" instance=ExtResource("1_moy0d")]
+attackName = "holy lance"
+baseDamage = 10.0
+attackType = 4
+manaCost = 5.0
+icon = ExtResource("2_tnxw0")

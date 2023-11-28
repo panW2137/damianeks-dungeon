@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://gmirbvl8gb7u"]
+
+[ext_resource type="Script" path="res://entities/entity.gd" id="1_7t210"]
+[ext_resource type="Texture2D" uid="uid://c20uphiqcrf18" path="res://textures/debug texture.png" id="2_dd1qf"]
+[ext_resource type="PackedScene" uid="uid://dnn2fkvf2jfja" path="res://ui/bar.tscn" id="4_frjnx"]
+
+[node name="entity" type="Node2D"]
+script = ExtResource("1_7t210")
+
+[node name="attacks" type="Node" parent="."]
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_dd1qf")
+
+[node name="health bar" parent="." instance=ExtResource("4_frjnx")]
+offset_left = -32.0
+offset_top = 20.0
+offset_right = 32.0
+offset_bottom = 28.0
+color = Color(0.768627, 0, 0, 1)

@@ -1,0 +1,507 @@
+[gd_scene load_steps=7 format=3 uid="uid://db1yl4x31310m"]
+
+[ext_resource type="Texture2D" uid="uid://c20uphiqcrf18" path="res://textures/debug texture.png" id="1_b7pf4"]
+[ext_resource type="Script" path="res://ui/ui.gd" id="1_gc8ly"]
+[ext_resource type="FontFile" uid="uid://de0bxdu4opbio" path="res://globals/PressStart2P-vaV7.ttf" id="2_wafpq"]
+[ext_resource type="Script" path="res://ui/indexed_button.gd" id="4_kwhix"]
+[ext_resource type="Texture2D" uid="uid://dv5c62yk5b7hp" path="res://textures/debug texture 3.png" id="5_b0wsw"]
+[ext_resource type="Texture2D" uid="uid://dotclmn7uekp2" path="res://textures/debug texture 2.png" id="6_ojhbb"]
+
+[node name="ui" type="ColorRect"]
+offset_top = 144.0
+offset_right = 400.0
+offset_bottom = 240.0
+color = Color(0.556863, 0.556863, 0.556863, 1)
+script = ExtResource("1_gc8ly")
+
+[node name="desc" type="Label" parent="."]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 8.0
+offset_right = 400.0
+offset_bottom = 129.0
+theme_override_fonts/font = ExtResource("2_wafpq")
+theme_override_font_sizes/font_size = 8
+autowrap_mode = 2
+
+[node name="attacks" type="Control" parent="."]
+anchors_preset = 0
+
+[node name="att1" type="Button" parent="attacks"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+icon = ExtResource("1_b7pf4")
+flat = true
+icon_alignment = 1
+script = ExtResource("4_kwhix")
+
+[node name="att2" type="Button" parent="attacks"]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 80.0
+offset_bottom = 40.0
+icon = ExtResource("1_b7pf4")
+flat = true
+icon_alignment = 1
+script = ExtResource("4_kwhix")
+index = 1
+
+[node name="att3" type="Button" parent="attacks"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 40.0
+offset_bottom = 80.0
+icon = ExtResource("1_b7pf4")
+flat = true
+icon_alignment = 1
+script = ExtResource("4_kwhix")
+index = 2
+
+[node name="att4" type="Button" parent="attacks"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 80.0
+offset_bottom = 80.0
+icon = ExtResource("1_b7pf4")
+flat = true
+icon_alignment = 1
+script = ExtResource("4_kwhix")
+index = 3
+
+[node name="inventory" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 80.0
+offset_right = 80.0
+
+[node name="inv1" type="Button" parent="inventory"]
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 24.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv2" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 48.0
+offset_bottom = 24.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv3" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 48.0
+offset_right = 72.0
+offset_bottom = 24.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv4" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 72.0
+offset_right = 96.0
+offset_bottom = 24.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv5" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 96.0
+offset_right = 120.0
+offset_bottom = 24.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv6" type="Button" parent="inventory"]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 24.0
+offset_bottom = 48.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv7" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 48.0
+offset_bottom = 48.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv8" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 24.0
+offset_right = 72.0
+offset_bottom = 48.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv9" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 24.0
+offset_right = 96.0
+offset_bottom = 48.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv10" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 24.0
+offset_right = 120.0
+offset_bottom = 48.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv11" type="Button" parent="inventory"]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 24.0
+offset_bottom = 72.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv12" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 48.0
+offset_right = 48.0
+offset_bottom = 72.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv13" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 48.0
+offset_right = 72.0
+offset_bottom = 72.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv14" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 48.0
+offset_right = 96.0
+offset_bottom = 72.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv15" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 48.0
+offset_right = 120.0
+offset_bottom = 72.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv16" type="Button" parent="inventory"]
+layout_mode = 0
+offset_top = 72.0
+offset_right = 24.0
+offset_bottom = 96.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv17" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 72.0
+offset_right = 48.0
+offset_bottom = 96.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv18" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 72.0
+offset_right = 72.0
+offset_bottom = 96.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv19" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 72.0
+offset_right = 96.0
+offset_bottom = 96.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="inv20" type="Button" parent="inventory"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 72.0
+offset_right = 120.0
+offset_bottom = 96.0
+icon = ExtResource("5_b0wsw")
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="loot window" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 152.0
+offset_top = -136.0
+offset_right = 248.0
+offset_bottom = -8.0
+color = Color(0.517647, 0.517647, 0.517647, 1)
+
+[node name="name" type="Label" parent="loot window"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_wafpq")
+theme_override_font_sizes/font_size = 16
+text = "LOOT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="inventory full" type="Label" parent="loot window"]
+visible = false
+layout_mode = 0
+offset_top = 104.0
+offset_right = 96.0
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wafpq")
+theme_override_font_sizes/font_size = 8
+text = "inventory full"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="loot icon" type="TextureRect" parent="loot window"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 64.0
+offset_bottom = 56.0
+texture = ExtResource("6_ojhbb")
+
+[node name="accept loot button" type="Button" parent="loot window"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 64.0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("2_wafpq")
+theme_override_font_sizes/font_size = 8
+text = "accept"
+
+[node name="refuse loot button" type="Button" parent="loot window"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 88.0
+offset_right = 80.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("2_wafpq")
+theme_override_font_sizes/font_size = 8
+text = "refuse"
+
+[node name="use item window" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 160.0
+offset_top = -136.0
+offset_right = 240.0
+offset_bottom = -24.0
+
+[node name="item texture" type="Sprite2D" parent="use item window"]
+position = Vector2(40, 24)
+texture = ExtResource("1_b7pf4")
+
+[node name="use item button" type="Button" parent="use item window"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 48.0
+offset_right = 72.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_wafpq")
+theme_override_font_sizes/font_size = 8
+text = "USE"
+icon_alignment = 1
+script = ExtResource("4_kwhix")
+
+[node name="delete button" type="Button" parent="use item window"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 80.0
+offset_right = 72.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wafpq")
+theme_override_font_sizes/font_size = 8
+text = "delete"
+script = ExtResource("4_kwhix")
+
+[node name="close button" type="Button" parent="use item window"]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 80.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("2_wafpq")
+theme_override_font_sizes/font_size = 8
+text = "X"
+
+[node name="ColorRect" type="ColorRect" parent="use item window"]
+layout_mode = 0
+offset_left = -160.0
+offset_top = 136.0
+offset_right = 240.0
+offset_bottom = 232.0
+color = Color(0, 0, 0, 0.435294)
+
+[node name="change attack window" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 144.0
+offset_top = -136.0
+offset_right = 256.0
+offset_bottom = -24.0
+color = Color(0.509804, 0.509804, 0.509804, 1)
+
+[node name="att 1" type="Sprite2D" parent="change attack window"]
+position = Vector2(39, 23)
+texture = ExtResource("1_b7pf4")
+
+[node name="att 2" type="Sprite2D" parent="change attack window"]
+position = Vector2(73, 23)
+texture = ExtResource("1_b7pf4")
+
+[node name="att 3" type="Sprite2D" parent="change attack window"]
+position = Vector2(39, 57)
+texture = ExtResource("1_b7pf4")
+
+[node name="att 4" type="Sprite2D" parent="change attack window"]
+position = Vector2(73, 57)
+texture = ExtResource("1_b7pf4")
+
+[node name="delete button" type="Button" parent="change attack window"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 80.0
+offset_right = 104.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wafpq")
+theme_override_font_sizes/font_size = 8
+text = "delete"
+script = ExtResource("4_kwhix")
+
+[node name="change att butt" type="Button" parent="change attack window"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 7.0
+offset_right = 55.0
+offset_bottom = 39.0
+flat = true
+script = ExtResource("4_kwhix")
+
+[node name="change att butt 2" type="Button" parent="change attack window"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 7.0
+offset_right = 89.0
+offset_bottom = 39.0
+flat = true
+script = ExtResource("4_kwhix")
+index = 1
+
+[node name="change att butt 3" type="Button" parent="change attack window"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 41.0
+offset_right = 55.0
+offset_bottom = 73.0
+flat = true
+script = ExtResource("4_kwhix")
+index = 2
+
+[node name="change att butt 4" type="Button" parent="change attack window"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 41.0
+offset_right = 89.0
+offset_bottom = 73.0
+flat = true
+script = ExtResource("4_kwhix")
+index = 3
+
+[node name="close button" type="Button" parent="change attack window"]
+layout_mode = 0
+offset_left = 96.0
+offset_right = 112.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("2_wafpq")
+theme_override_font_sizes/font_size = 8
+text = "X"
+
+[node name="ColorRect" type="ColorRect" parent="change attack window"]
+layout_mode = 0
+offset_left = -144.0
+offset_top = 112.0
+offset_right = 256.0
+offset_bottom = 232.0
+color = Color(0, 0, 0, 0.509804)
+
+[connection signal="idx_hover" from="attacks/att1" to="." method="_on_att_idx_hover"]
+[connection signal="idx_pressed" from="attacks/att1" to="." method="_on_att_idx_pressed"]
+[connection signal="idx_hover" from="attacks/att2" to="." method="_on_att_idx_hover"]
+[connection signal="idx_pressed" from="attacks/att2" to="." method="_on_att_idx_pressed"]
+[connection signal="idx_hover" from="attacks/att3" to="." method="_on_att_idx_hover"]
+[connection signal="idx_pressed" from="attacks/att3" to="." method="_on_att_idx_pressed"]
+[connection signal="idx_hover" from="attacks/att4" to="." method="_on_att_idx_hover"]
+[connection signal="idx_pressed" from="attacks/att4" to="." method="_on_att_idx_pressed"]
+[connection signal="mouse_entered" from="loot window/loot icon" to="." method="_on_loot_icon_mouse_entered"]
+[connection signal="pressed" from="loot window/accept loot button" to="." method="_on_accept_loot_button_pressed"]
+[connection signal="pressed" from="loot window/refuse loot button" to="." method="_on_refuse_loot_button_pressed"]
+[connection signal="idx_pressed" from="use item window/use item button" to="." method="_on_use_item_button_idx_pressed"]
+[connection signal="idx_pressed" from="use item window/delete button" to="." method="_on_delete_button_idx_pressed"]
+[connection signal="pressed" from="use item window/close button" to="." method="_on_close_button_pressed"]
+[connection signal="idx_pressed" from="change attack window/delete button" to="." method="_on_delete_button_idx_pressed"]
+[connection signal="idx_pressed" from="change attack window/change att butt" to="." method="_on_change_att_butt_idx_pressed"]
+[connection signal="idx_pressed" from="change attack window/change att butt 2" to="." method="_on_change_att_butt_idx_pressed"]
+[connection signal="idx_pressed" from="change attack window/change att butt 3" to="." method="_on_change_att_butt_idx_pressed"]
+[connection signal="idx_pressed" from="change attack window/change att butt 4" to="." method="_on_change_att_butt_idx_pressed"]
+[connection signal="pressed" from="change attack window/close button" to="." method="_on_close_button_pressed"]

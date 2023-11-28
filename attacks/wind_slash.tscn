@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dulbhfvdheyc0"]
+
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="1_eespo"]
+[ext_resource type="Texture2D" uid="uid://cmdiv118rh87j" path="res://textures/attacks/wind slash.png" id="2_f5s1p"]
+
+[node name="wind slash" instance=ExtResource("1_eespo")]
+attackName = "wind slash"
+baseDamage = 10.0
+attackType = 2
+variation = 1.0
+icon = ExtResource("2_f5s1p")

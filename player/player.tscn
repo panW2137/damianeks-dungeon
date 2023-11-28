@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cisxy0ycflxkj"]
+
+[ext_resource type="PackedScene" uid="uid://gmirbvl8gb7u" path="res://entities/entity.tscn" id="1_qcru3"]
+[ext_resource type="Script" path="res://player/player.gd" id="2_5iwsc"]
+[ext_resource type="PackedScene" uid="uid://dnn2fkvf2jfja" path="res://ui/bar.tscn" id="3_yb7iw"]
+
+[node name="player" instance=ExtResource("1_qcru3")]
+script = ExtResource("2_5iwsc")
+maxSanity = 0.0
+maxMana = 0.0
+
+[node name="health bar" parent="." index="2"]
+mode = 1
+
+[node name="sanity bar" parent="." index="3" instance=ExtResource("3_yb7iw")]
+offset_left = -32.0
+offset_top = 31.0
+offset_right = 32.0
+offset_bottom = 39.0
+color = Color(0.427451, 0.427451, 0.427451, 1)
+mode = 1
+
+[node name="mana bar" parent="." index="4" instance=ExtResource("3_yb7iw")]
+offset_left = -32.0
+offset_top = 42.0
+offset_right = 32.0
+offset_bottom = 50.0
+color = Color(0.105882, 0.305882, 1, 1)
+mode = 1

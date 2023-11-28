@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://xmai6bx861et"]
+
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="1_arhqq"]
+[ext_resource type="Texture2D" uid="uid://bi1ux5e2cnmpv" path="res://textures/attacks/blood sacrifice.png" id="2_nxdjc"]
+
+[node name="blood sacrifice" instance=ExtResource("1_arhqq")]
+attackName = "blood sacrifice"
+baseDamage = 25.0
+attackType = 5
+healthCost = 5.0
+manaCost = 100.0
+emotionalCost = 5.0
+variation = 0.2
+icon = ExtResource("2_nxdjc")
+isSpell = true

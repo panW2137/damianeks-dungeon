@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://t78snlj520w5"]
+
+[ext_resource type="Script" path="res://items/item.gd" id="1_basfh"]
+
+[node name="test armor 2" type="Node"]
+script = ExtResource("1_basfh")
+itemType = 1
+itemName = "test armor 2"
+itemDescription = "yo mama fat"
+armorProt = 75.0
+armorType = 4

@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://n6lwegq8f0ai"]
+
+[ext_resource type="PackedScene" uid="uid://gmirbvl8gb7u" path="res://entities/entity.tscn" id="1_fhywe"]
+[ext_resource type="Script" path="res://monsters/default_monster.gd" id="2_82coh"]
+[ext_resource type="PackedScene" uid="uid://dynqotekp5bev" path="res://items/test_armor_1.tscn" id="2_upyqg"]
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="3_i0k7e"]
+[ext_resource type="PackedScene" uid="uid://w70xur6qloau" path="res://items/test_attack_item.tscn" id="4_kn8i7"]
+
+[node name="default monster" instance=ExtResource("1_fhywe")]
+script = ExtResource("2_82coh")
+entityName = "default monster"
+
+[node name="loot" type="Node" parent="." index="3"]
+
+[node name="test armor 1" parent="loot" index="0" instance=ExtResource("2_upyqg")]
+
+[node name="item" parent="loot" index="1" instance=ExtResource("3_i0k7e")]
+
+[node name="test attack item" parent="loot" index="2" instance=ExtResource("4_kn8i7")]

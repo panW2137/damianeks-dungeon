@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2ypy34o5iou8"]
+
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="1_xkj4y"]
+[ext_resource type="Texture2D" uid="uid://bkyj44n1py03s" path="res://textures/attacks/water splash.png" id="2_glnvm"]
+
+[node name="water splash" instance=ExtResource("1_xkj4y")]
+attackName = "water splash"
+baseDamage = 12.0
+attackType = 1
+manaCost = 10.0
+emotionalCost = 1.0
+variation = 0.2
+icon = ExtResource("2_glnvm")
+isSpell = true

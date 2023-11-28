@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d12asaxoftouc"]
+
+[ext_resource type="Script" path="res://ui/indexed_button.gd" id="1_kb75c"]
+
+[node name="indexed button" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_kb75c")
