@@ -1,0 +1,170 @@
+[gd_scene load_steps=11 format=3 uid="uid://dl71amlnskgyo"]
+
+[ext_resource type="Script" path="res://menus/level_select.gd" id="1_6y55k"]
+[ext_resource type="FontFile" uid="uid://de0bxdu4opbio" path="res://globals/PressStart2P-vaV7.ttf" id="1_exa0p"]
+[ext_resource type="Texture2D" uid="uid://nn0drgomir2b" path="res://textures/ui/select level button.png" id="3_10avd"]
+[ext_resource type="Texture2D" uid="uid://b827sjgj43j67" path="res://textures/backgrounds/castle 1.png" id="3_jrxe3"]
+[ext_resource type="Texture2D" uid="uid://baof36onnmqok" path="res://textures/backgrounds/forest 1.png" id="3_vsggp"]
+[ext_resource type="Texture2D" uid="uid://d87i01h0mkr6" path="res://textures/backgrounds/dimension 1.png" id="4_gqfsc"]
+[ext_resource type="Texture2D" uid="uid://cm054alfu2xk1" path="res://textures/m.wew2.png" id="4_h6ful"]
+[ext_resource type="Texture2D" uid="uid://pjvenrfh57d6" path="res://textures/ui/exit icon.png" id="6_nnppc"]
+[ext_resource type="Texture2D" uid="uid://dv1d2u6jqx2cp" path="res://textures/ui/level up button.png" id="8_0f0o7"]
+[ext_resource type="Texture2D" uid="uid://cfirss41tivay" path="res://textures/ui/lock.png" id="8_oee4x"]
+
+[node name="level select" type="Node2D"]
+script = ExtResource("1_6y55k")
+dungeonBackgrounds = Array[Texture]([ExtResource("3_vsggp"), ExtResource("3_jrxe3"), ExtResource("4_gqfsc")])
+
+[node name="LevelUpButton" type="Sprite2D" parent="."]
+modulate = Color(0.501961, 0.501961, 0.501961, 1)
+position = Vector2(112, 0)
+texture = ExtResource("8_0f0o7")
+centered = false
+
+[node name="M_wew2" type="Sprite2D" parent="."]
+modulate = Color(0.505882, 0.505882, 0.505882, 1)
+position = Vector2(288, 0)
+scale = Vector2(0.112, 0.112)
+texture = ExtResource("4_h6ful")
+centered = false
+
+[node name="SelectLevelButton" type="Sprite2D" parent="."]
+position = Vector2(368, 112)
+texture = ExtResource("3_10avd")
+centered = false
+
+[node name="SelectLevelButton2" type="Sprite2D" parent="."]
+position = Vector2(0, 112)
+texture = ExtResource("3_10avd")
+centered = false
+
+[node name="bg" type="Sprite2D" parent="."]
+modulate = Color(0.498039, 0.498039, 0.498039, 1)
+position = Vector2(32, 112)
+scale = Vector2(0.84, 0.888889)
+texture = ExtResource("3_vsggp")
+centered = false
+
+[node name="ExitIcon" type="Sprite2D" parent="."]
+modulate = Color(0.501961, 0.501961, 0.501961, 1)
+texture = ExtResource("6_nnppc")
+centered = false
+
+[node name="shop" type="Button" parent="."]
+offset_left = 288.0
+offset_right = 400.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("1_exa0p")
+theme_override_font_sizes/font_size = 16
+text = "shop"
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="level select button" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 112.0
+offset_right = 368.0
+offset_bottom = 240.0
+theme_override_fonts/font = ExtResource("1_exa0p")
+theme_override_font_sizes/font_size = 16
+text = "dark forest
+"
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="next level button" type="Button" parent="."]
+offset_left = 368.0
+offset_top = 112.0
+offset_right = 400.0
+offset_bottom = 240.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_exa0p")
+theme_override_font_sizes/font_size = 16
+text = ">"
+flat = true
+
+[node name="previous level button" type="Button" parent="."]
+offset_top = 112.0
+offset_right = 32.0
+offset_bottom = 240.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_exa0p")
+theme_override_font_sizes/font_size = 16
+text = "<"
+flat = true
+
+[node name="return button" type="Button" parent="."]
+offset_right = 112.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("1_exa0p")
+theme_override_font_sizes/font_size = 16
+text = "main
+menu"
+flat = true
+
+[node name="skill points button" type="Button" parent="."]
+offset_left = 112.0
+offset_right = 288.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("1_exa0p")
+theme_override_font_sizes/font_size = 16
+text = "skill
+points"
+flat = true
+
+[node name="level locked" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.0
+offset_top = 112.0
+offset_right = 368.0
+offset_bottom = 240.0
+
+[node name="Lock" type="Sprite2D" parent="level locked"]
+position = Vector2(8.00004, 32)
+scale = Vector2(3, 3)
+texture = ExtResource("8_oee4x")
+centered = false
+
+[node name="Lock2" type="Sprite2D" parent="level locked"]
+position = Vector2(288, 32)
+scale = Vector2(3, 3)
+texture = ExtResource("8_oee4x")
+centered = false
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, 112, 400, 112, 448, 112, 448, -8, 288, -8, 288, 112, 288, -24, 112, -24, 112, 112)
+width = 1.0
+
+[connection signal="pressed" from="shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="level select button" to="." method="_on_level_select_button_pressed"]
+[connection signal="pressed" from="next level button" to="." method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="previous level button" to="." method="_on_previous_level_button_pressed"]
+[connection signal="pressed" from="return button" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="skill points button" to="." method="_on_skill_points_button_pressed"]

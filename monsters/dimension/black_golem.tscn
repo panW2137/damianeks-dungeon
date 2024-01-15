@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://chaigs1n6ocxy"]
+
+[ext_resource type="PackedScene" uid="uid://n6lwegq8f0ai" path="res://monsters/default_monster.tscn" id="1_5bo8n"]
+[ext_resource type="Texture2D" uid="uid://dleuaqy0krnww" path="res://textures/enemies/blackstone golem.png" id="2_f6y60"]
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="3_yl7et"]
+[ext_resource type="Texture2D" uid="uid://cr7mad3fgkkvo" path="res://textures/enemy attacks/ancient software.png" id="4_ficak"]
+[ext_resource type="Texture2D" uid="uid://b1rh6h8yuunjh" path="res://textures/enemy attacks/laser scanning.png" id="5_qgaaw"]
+[ext_resource type="Texture2D" uid="uid://ct7u4kjih8dyl" path="res://textures/enemy attacks/yeet.png" id="6_j238c"]
+[ext_resource type="PackedScene" uid="uid://bn5rfq0c7yvw6" path="res://items/laser.tscn" id="7_57bb8"]
+[ext_resource type="PackedScene" uid="uid://doxsj4plo7nwb" path="res://items/circuit.tscn" id="8_8gy6y"]
+
+[node name="black golem" instance=ExtResource("1_5bo8n")]
+texture = ExtResource("2_f6y60")
+entityType = 1
+armorType = 3
+entityName = "black golem"
+mindPower = 50.0
+strength = 50.0
+armor = 50.0
+lootChance = 50
+
+[node name="software" parent="attacks" index="0" instance=ExtResource("3_yl7et")]
+attackName = "ancient software"
+baseEmotionalDamage = 10.0
+attackType = 6
+healthCost = 10.0
+icon = ExtResource("4_ficak")
+bigIcon = ExtResource("4_ficak")
+
+[node name="laset" parent="attacks" index="1" instance=ExtResource("3_yl7et")]
+attackName = "laser scanning"
+baseDamage = 20.0
+attackType = 0
+variation = 0.7
+icon = ExtResource("5_qgaaw")
+bigIcon = ExtResource("5_qgaaw")
+isSpell = true
+
+[node name="yeet" parent="attacks" index="2" instance=ExtResource("3_yl7et")]
+attackName = "throw the rock"
+baseDamage = 15.0
+attackType = 3
+variation = 0.6
+icon = ExtResource("6_j238c")
+bigIcon = ExtResource("6_j238c")
+
+[node name="sprite" parent="." index="1"]
+position = Vector2(-8, -20)
+texture = ExtResource("2_f6y60")
+
+[node name="laser" parent="loot" index="0" instance=ExtResource("7_57bb8")]
+
+[node name="circuit" parent="loot" index="1" instance=ExtResource("8_8gy6y")]
+
+[node name="circuit2" parent="loot" index="2" instance=ExtResource("8_8gy6y")]
+
+[node name="circuit3" parent="loot" index="3" instance=ExtResource("8_8gy6y")]
+
+[node name="circuit4" parent="loot" index="4" instance=ExtResource("8_8gy6y")]

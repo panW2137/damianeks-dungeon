@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://dy5s2jrt7nf5j"]
+
+[ext_resource type="PackedScene" uid="uid://n6lwegq8f0ai" path="res://monsters/default_monster.tscn" id="1_vujgd"]
+[ext_resource type="Texture2D" uid="uid://c5utmsqcmkpkb" path="res://textures/enemies/flower.png" id="2_nvvjy"]
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="3_wtnqa"]
+[ext_resource type="Texture2D" uid="uid://cmif2xhjon1o7" path="res://textures/enemy attacks/pollen.png" id="4_a7wnh"]
+[ext_resource type="Texture2D" uid="uid://bl8yb2w5q7pou" path="res://textures/enemy attacks/stomach acid.png" id="5_onro5"]
+[ext_resource type="Texture2D" uid="uid://bsnxka3iak8c6" path="res://textures/enemy attacks/a moving plant.png" id="6_rvo6j"]
+[ext_resource type="PackedScene" uid="uid://bdkwsflfvb8pr" path="res://items/meaty_fruit.tscn" id="7_7k5bn"]
+[ext_resource type="PackedScene" uid="uid://dkqydnae2wuyp" path="res://items/pollen_item.tscn" id="8_h62lw"]
+
+[node name="carnivorous plant" instance=ExtResource("1_vujgd")]
+texture = ExtResource("2_nvvjy")
+entityType = 0
+armorType = 1
+entityName = "cornivorous plant"
+mindPower = 10.0
+strength = 10.0
+maxHealth = 60.0
+lootChance = 50
+
+[node name="pollen" parent="attacks" index="0" instance=ExtResource("3_wtnqa")]
+attackName = "pollen"
+baseDamage = 10.0
+attackType = 2
+healthCost = -1.0
+icon = ExtResource("4_a7wnh")
+bigIcon = ExtResource("4_a7wnh")
+
+[node name="acid" parent="attacks" index="1" instance=ExtResource("3_wtnqa")]
+attackName = "stomach acid"
+baseDamage = 16.0
+attackType = 1
+healthCost = 1.0
+variation = 0.5
+icon = ExtResource("5_onro5")
+bigIcon = ExtResource("5_onro5")
+
+[node name="attack maker" parent="attacks" index="2" instance=ExtResource("3_wtnqa")]
+attackName = "a moving plant"
+baseEmotionalDamage = 10.0
+attackType = 5
+icon = ExtResource("6_rvo6j")
+bigIcon = ExtResource("6_rvo6j")
+isSpell = true
+
+[node name="sprite" parent="." index="1"]
+position = Vector2(-22, -42)
+texture = ExtResource("2_nvvjy")
+
+[node name="meaty fruit" parent="loot" index="0" instance=ExtResource("7_7k5bn")]
+
+[node name="pollen item" parent="loot" index="1" instance=ExtResource("8_h62lw")]

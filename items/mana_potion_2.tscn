@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtoosy573tv4h"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_o3c8e"]
+[ext_resource type="Texture2D" uid="uid://gaxkdcewxfvl" path="res://textures/items/mana potion 2.png" id="2_qapt8"]
+
+[node name="mana potion 2" instance=ExtResource("1_o3c8e")]
+icon = ExtResource("2_qapt8")
+itemName = "wooden neclace"
+itemDescription = "mobile"
+manaChange = 100.0
+healthChange = 10.0
+sanityChange = -5.0
+basePrice = 200.0

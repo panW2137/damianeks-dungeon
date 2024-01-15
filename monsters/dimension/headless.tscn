@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://x6plalvnxuox"]
+
+[ext_resource type="PackedScene" uid="uid://n6lwegq8f0ai" path="res://monsters/default_monster.tscn" id="1_2ic3p"]
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="2_gtbgc"]
+[ext_resource type="Texture2D" uid="uid://c8n4tcgftn0rg" path="res://textures/enemy attacks/extinction.png" id="3_pm71v"]
+[ext_resource type="Texture2D" uid="uid://xuuyhvofxqdo" path="res://textures/enemy attacks/magma.png" id="4_7vee5"]
+[ext_resource type="Texture2D" uid="uid://bymhlbheq5k72" path="res://textures/enemy attacks/red fist.png" id="5_gjmmb"]
+[ext_resource type="Texture2D" uid="uid://bui6pl7822txn" path="res://textures/enemies/headless.png" id="6_1n4ju"]
+
+[node name="headless" instance=ExtResource("1_2ic3p")]
+baseMoneyLoot = 300.0
+entityType = 1
+armorType = 5
+entityName = "headless demon"
+strength = 100.0
+maxHealth = 150.0
+armor = 25.0
+lootChance = 0
+
+[node name="extinction" parent="attacks" index="0" instance=ExtResource("2_gtbgc")]
+attackName = "extinction"
+baseDamage = 15.0
+attackType = 0
+healthCost = -10.0
+variation = 1.0
+icon = ExtResource("3_pm71v")
+bigIcon = ExtResource("3_pm71v")
+
+[node name="magma" parent="attacks" index="1" instance=ExtResource("2_gtbgc")]
+attackName = "magma"
+baseDamage = 10.0
+baseEmotionalDamage = 5.0
+attackType = 0
+variation = 0.3
+icon = ExtResource("4_7vee5")
+bigIcon = ExtResource("4_7vee5")
+
+[node name="fist" parent="attacks" index="2" instance=ExtResource("2_gtbgc")]
+attackName = "fist"
+baseDamage = 10.0
+attackType = 0
+variation = 0.4
+icon = ExtResource("5_gjmmb")
+bigIcon = ExtResource("5_gjmmb")
+
+[node name="sprite" parent="." index="1"]
+position = Vector2(-14, -42)
+texture = ExtResource("6_1n4ju")

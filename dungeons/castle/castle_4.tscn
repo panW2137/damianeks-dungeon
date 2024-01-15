@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://gllpr2fdvff6"]
+
+[ext_resource type="PackedScene" uid="uid://dkuyw1nernofl" path="res://dungeons/dungeon.tscn" id="1_xb3p2"]
+[ext_resource type="Texture2D" uid="uid://b827sjgj43j67" path="res://textures/backgrounds/castle 1.png" id="2_yarvj"]
+[ext_resource type="PackedScene" uid="uid://bc7ec4nq76017" path="res://monsters/castle/mimic.tscn" id="3_b33bu"]
+
+[node name="castle_4" instance=ExtResource("1_xb3p2")]
+
+[node name="bg" parent="." index="0"]
+texture = ExtResource("2_yarvj")
+
+[node name="enemy" parent="." index="7" instance=ExtResource("3_b33bu")]
+position = Vector2(320, 88)
+
+[connection signal="death" from="enemy" to="." method="_on_enemy_death"]
+[connection signal="got_damaged" from="enemy" to="." method="_on_enemy_got_damaged"]
+[connection signal="setAttackDescription" from="enemy" to="." method="_on_enemy_set_attack_description"]

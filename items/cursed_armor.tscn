@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtq25xndmiaqq"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_hsnjk"]
+[ext_resource type="Texture2D" uid="uid://b6nd4wjfx3maa" path="res://textures/items/drop dead armor.png" id="2_ye0dc"]
+
+[node name="cursed armor" instance=ExtResource("1_hsnjk")]
+icon = ExtResource("2_ye0dc")
+itemType = 1
+itemName = "cursed armor"
+itemDescription = "it doesn't move anymore"
+armorProt = 45.0
+armorType = 5
+manaChange = 0.0
+healthChange = 0.0
+sanityChange = 0.0

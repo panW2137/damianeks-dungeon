@@ -1,15 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://xmai6bx861et"]
+[gd_scene load_steps=4 format=3 uid="uid://xmai6bx861et"]
 
 [ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="1_arhqq"]
-[ext_resource type="Texture2D" uid="uid://bi1ux5e2cnmpv" path="res://textures/attacks/blood sacrifice.png" id="2_nxdjc"]
+[ext_resource type="Texture2D" uid="uid://bjx62cqt0kxoe" path="res://textures/attacks/blood_sacrifice_small.png" id="2_b7khu"]
+[ext_resource type="Texture2D" uid="uid://csq5xgcgucht7" path="res://textures/attacks/blood_sacrifice_big.png" id="3_pj3x6"]
 
 [node name="blood sacrifice" instance=ExtResource("1_arhqq")]
-attackName = "blood sacrifice"
 baseDamage = 25.0
 attackType = 5
-healthCost = 5.0
-manaCost = 100.0
-emotionalCost = 5.0
+healthCost = -5.0
+manaCost = -25.0
+emotionalCost = -10.0
 variation = 0.2
-icon = ExtResource("2_nxdjc")
+icon = ExtResource("2_b7khu")
+bigIcon = ExtResource("3_pj3x6")
 isSpell = true

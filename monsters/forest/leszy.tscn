@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://ba70ojwbvv0d1"]
+
+[ext_resource type="PackedScene" uid="uid://n6lwegq8f0ai" path="res://monsters/default_monster.tscn" id="1_vw0kk"]
+[ext_resource type="Texture2D" uid="uid://ns6jlqvm3dvl" path="res://textures/enemies/leszy.png" id="2_t8v22"]
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="3_y5lq1"]
+[ext_resource type="Texture2D" uid="uid://by51dncu0k74j" path="res://textures/enemy attacks/leszy attack 3.png" id="4_2xm0d"]
+[ext_resource type="Texture2D" uid="uid://1tfpspvhu4lm" path="res://textures/enemy attacks/leszy attack 4.png" id="5_pheqa"]
+[ext_resource type="Texture2D" uid="uid://buy7eubsx6ev6" path="res://textures/enemy attacks/leszy attack 2.png" id="6_bvaof"]
+[ext_resource type="Texture2D" uid="uid://26bkfas1naa2" path="res://textures/enemy attacks/leszy attack 5.png" id="7_l43gn"]
+[ext_resource type="Texture2D" uid="uid://rfsnt20lsm0b" path="res://textures/enemy attacks/leszy attack 1.png" id="8_ir3xx"]
+
+[node name="leszy" instance=ExtResource("1_vw0kk")]
+baseMoneyLoot = 500.0
+texture = ExtResource("2_t8v22")
+entityType = 4
+armorType = 5
+entityName = "leszy"
+maxHealth = 150.0
+armor = 25.0
+lootChance = 0
+
+[node name="3" parent="attacks" index="0" instance=ExtResource("3_y5lq1")]
+attackName = "phase 3"
+baseDamage = 8.0
+baseEmotionalDamage = 8.0
+attackType = 0
+icon = ExtResource("4_2xm0d")
+bigIcon = ExtResource("4_2xm0d")
+
+[node name="4" parent="attacks" index="1" instance=ExtResource("3_y5lq1")]
+attackName = "phase 4"
+baseDamage = 4.0
+baseEmotionalDamage = 12.0
+attackType = 1
+icon = ExtResource("5_pheqa")
+bigIcon = ExtResource("5_pheqa")
+isSpell = true
+
+[node name="2" parent="attacks" index="2" instance=ExtResource("3_y5lq1")]
+attackName = "phase 2"
+baseDamage = 12.0
+baseEmotionalDamage = 4.0
+attackType = 2
+icon = ExtResource("6_bvaof")
+bigIcon = ExtResource("6_bvaof")
+
+[node name="5" parent="attacks" index="3" instance=ExtResource("3_y5lq1")]
+attackName = "phase 5"
+baseEmotionalDamage = 18.0
+attackType = 3
+icon = ExtResource("7_l43gn")
+bigIcon = ExtResource("7_l43gn")
+isSpell = true
+
+[node name="1" parent="attacks" index="4" instance=ExtResource("3_y5lq1")]
+attackName = "phase 1"
+baseDamage = 18.0
+attackType = 6
+icon = ExtResource("8_ir3xx")
+bigIcon = ExtResource("8_ir3xx")
+
+[node name="sprite" parent="." index="1"]
+position = Vector2(-28, -80)
+texture = ExtResource("2_t8v22")

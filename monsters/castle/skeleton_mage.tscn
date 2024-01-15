@@ -1,0 +1,108 @@
+[gd_scene load_steps=14 format=3 uid="uid://48o31dp806ux"]
+
+[ext_resource type="PackedScene" uid="uid://n6lwegq8f0ai" path="res://monsters/default_monster.tscn" id="1_fapqe"]
+[ext_resource type="Texture2D" uid="uid://cg51mw620oplw" path="res://textures/enemies/skeleton mage.png" id="2_t44t1"]
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="3_pinxt"]
+[ext_resource type="Texture2D" uid="uid://ckotx26n2prwm" path="res://textures/enemy attacks/cursed spell.png" id="4_tvotd"]
+[ext_resource type="Texture2D" uid="uid://ces1qwog5d2cd" path="res://textures/enemy attacks/earth spell.png" id="5_oxr5h"]
+[ext_resource type="Texture2D" uid="uid://clgkyu44xbhe0" path="res://textures/enemy attacks/fire spell.png" id="6_6ag7h"]
+[ext_resource type="Texture2D" uid="uid://cphc07mtxdryb" path="res://textures/enemy attacks/holy spell.png" id="7_d6lsj"]
+[ext_resource type="Texture2D" uid="uid://br6eok78s4qbb" path="res://textures/enemy attacks/normal spell.png" id="8_mnpf1"]
+[ext_resource type="Texture2D" uid="uid://bcw1vwmbduvvt" path="res://textures/enemy attacks/water spell.png" id="9_6rk6w"]
+[ext_resource type="Texture2D" uid="uid://dveul3he5fou1" path="res://textures/enemy attacks/wind spell.png" id="10_wfmn2"]
+[ext_resource type="PackedScene" uid="uid://ddi7oin1h2c5l" path="res://items/mana_potion.tscn" id="11_sal2w"]
+[ext_resource type="PackedScene" uid="uid://d1g4jixxdck5" path="res://items/earth_spell.tscn" id="12_4q6b4"]
+[ext_resource type="PackedScene" uid="uid://bmftwfnpdkm6p" path="res://items/normal_spell.tscn" id="13_bg082"]
+
+[node name="skeleton mage" instance=ExtResource("1_fapqe")]
+texture = ExtResource("2_t44t1")
+entityType = 6
+armorType = 1
+entityName = "skeleton mage"
+mindPower = 50.0
+strength = 10.0
+maxHealth = 75.0
+
+[node name="cursed" parent="attacks" index="0" instance=ExtResource("3_pinxt")]
+attackName = "cursed orb"
+baseDamage = 10.0
+baseEmotionalDamage = 10.0
+attackType = 5
+variation = 0.3
+icon = ExtResource("4_tvotd")
+bigIcon = ExtResource("4_tvotd")
+isSpell = true
+
+[node name="earth" parent="attacks" index="1" instance=ExtResource("3_pinxt")]
+attackName = "earth orb"
+baseDamage = 10.0
+baseEmotionalDamage = 10.0
+attackType = 3
+variation = 0.3
+icon = ExtResource("5_oxr5h")
+bigIcon = ExtResource("5_oxr5h")
+isSpell = true
+
+[node name="fire" parent="attacks" index="2" instance=ExtResource("3_pinxt")]
+attackName = "fire orb"
+baseDamage = 10.0
+baseEmotionalDamage = 10.0
+attackType = 0
+variation = 0.3
+icon = ExtResource("6_6ag7h")
+bigIcon = ExtResource("6_6ag7h")
+isSpell = true
+
+[node name="holy" parent="attacks" index="3" instance=ExtResource("3_pinxt")]
+attackName = "holy orb"
+baseDamage = 10.0
+baseEmotionalDamage = 10.0
+attackType = 4
+variation = 0.3
+icon = ExtResource("7_d6lsj")
+bigIcon = ExtResource("7_d6lsj")
+isSpell = true
+
+[node name="normal" parent="attacks" index="4" instance=ExtResource("3_pinxt")]
+attackName = "orb"
+baseDamage = 10.0
+baseEmotionalDamage = 10.0
+attackType = 6
+variation = 0.3
+icon = ExtResource("8_mnpf1")
+bigIcon = ExtResource("8_mnpf1")
+isSpell = true
+
+[node name="water" parent="attacks" index="5" instance=ExtResource("3_pinxt")]
+attackName = "water orb"
+baseDamage = 10.0
+baseEmotionalDamage = 10.0
+attackType = 1
+variation = 0.3
+icon = ExtResource("9_6rk6w")
+bigIcon = ExtResource("9_6rk6w")
+isSpell = true
+
+[node name="water2" parent="attacks" index="6" instance=ExtResource("3_pinxt")]
+attackName = "wind orb"
+baseDamage = 10.0
+baseEmotionalDamage = 10.0
+attackType = 2
+variation = 0.3
+icon = ExtResource("10_wfmn2")
+bigIcon = ExtResource("10_wfmn2")
+isSpell = true
+
+[node name="sprite" parent="." index="1"]
+position = Vector2(-18, -40)
+texture = ExtResource("2_t44t1")
+
+[node name="mana_potion" parent="loot" index="0" instance=ExtResource("11_sal2w")]
+
+[node name="mana_potion2" parent="loot" index="1" instance=ExtResource("11_sal2w")]
+
+[node name="mana_potion3" parent="loot" index="2" instance=ExtResource("11_sal2w")]
+
+[node name="earth spell" parent="loot" index="3" instance=ExtResource("12_4q6b4")]
+
+[node name="normal spell" parent="loot" index="4" instance=ExtResource("13_bg082")]

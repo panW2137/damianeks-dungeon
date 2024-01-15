@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://doamqe5k1vhrn"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_ec4d6"]
+[ext_resource type="Texture2D" uid="uid://iioj7uoxku33" path="res://textures/items/sanity potion 5.png" id="2_0y2tl"]
+
+[node name="sanity potion 5" instance=ExtResource("1_ec4d6")]
+icon = ExtResource("2_0y2tl")
+itemName = "vodka"
+itemDescription = "made in Lechia"
+manaChange = 25.0
+healthChange = -5.0
+sanityChange = 250.0
+basePrice = 500.0

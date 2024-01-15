@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpf8nyj2o5pcp"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_5jgyh"]
+[ext_resource type="Texture2D" uid="uid://dn624byjhr3c5" path="res://textures/items/mana potion 1.png" id="2_rh4y2"]
+
+[node name="mana potion 1" instance=ExtResource("1_5jgyh")]
+icon = ExtResource("2_rh4y2")
+itemName = "wooden triangle"
+itemDescription = "common symbol in tobrukian religions"
+manaChange = 50.0
+healthChange = 5.0
+sanityChange = -5.0
+basePrice = 100.0

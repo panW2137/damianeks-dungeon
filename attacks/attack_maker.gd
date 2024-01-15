@@ -12,6 +12,7 @@ class_name AttackMaker
 @export var variation:float = 0.0
 
 @export var icon:Texture2D = preload("res://textures/debug texture.png")
+@export var bigIcon:Texture2D = preload("res://textures/debug texture.png")
 @export var isSpell:bool = false
 
 func create_attack(strength:float,mind:float):
@@ -54,11 +55,24 @@ func get_description(strength:float, mind:float):
 		dmg = baseDamage * (1.0+(strength/100))
 		desc += "attack>--\n"
 	
+	if dmg!= 0:
+		desc += "dmg: "+str(snappedf(dmg*(1.0-variation),0.01))+" - "+str(snappedf(dmg*(1.0+variation),0.01))+"\n"
+	if baseEmotionalDamage != 0:
+		desc += "sanity dmg: "+str(baseEmotionalDamage)+"\n \n"
 	
-	desc += "dmg: "+str(snappedf(dmg*(1.0-variation),0.01))+" - "+str(snappedf(dmg*(1.0+variation),0.01))+"\n \n"
+	if manaCost >0:
+		desc += "mana cost: "+str(manaCost)+"\n"
+	elif manaCost <0:
+		desc += "mana regen: "+str(-manaCost)+"\n"
 	
-	desc += "mana cost: "+str(manaCost)+"\n"
-	desc += "sanity cost: "+str(emotionalCost)+"\n"
-	desc += "health cost: "+str(healthCost) +"\n"
+	if emotionalCost >0:
+		desc += "sanity cost: "+str(emotionalCost)+"\n"
+	elif emotionalCost <0:
+		desc += "sanity regen: "+str(-emotionalCost)+"\n"
+	
+	if healthCost >0:
+		desc += "health cost: "+str(healthCost) +"\n"
+	elif healthCost <0:
+		desc += "health regen: "+str(-healthCost) +"\n"
 	
 	return desc

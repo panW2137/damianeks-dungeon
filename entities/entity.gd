@@ -1,6 +1,8 @@
 extends Node2D
 class_name Entity
 
+@export var isPlayer:bool = false
+
 @export var texture:Texture2D = preload("res://textures/debug texture.png")
 
 @export var entityType:Globals.type = Globals.type.NONE
@@ -21,13 +23,19 @@ var health:float = 0.0
 @onready var sprite = $sprite
 @onready var healthBar = $"health bar"
 
+@onready var animation = $AnimationPlayer
+@onready var hpAnim = $"HP indicator anim"
+@onready var HPIndicator = $"HP indicator"
+@onready var SanityIndicator = $"sanity indicator"
+@onready var ManaIndicator = $"mana indicator"
+
 signal death
 signal got_damaged(dmg:float,dmgType:Globals.type)
 signal dodge
 signal got_emotionaly_damaged(emotonalDmg:float)
 
 func _ready():
-	sprite.texture = texture
+	#sprite.texture = texture
 	health = maxHealth
 	healthBar.set_bar(health,maxHealth)
 	initialize()
@@ -55,6 +63,11 @@ func damage(dmg:float,emotionalDmg:float,dmgType:Globals.type):
 	if dmg<0:
 		dmg = 0
 	
+	if !isPlayer:
+		animation.play("swipe right")
+	else:
+		animation.play("swipe left")
+	
 	emit_signal("got_damaged",dmg,dmgType)
 	change_health(-dmg)
 	change_sanity(-emotionalDmg)
@@ -64,10 +77,12 @@ func change_sanity(_emotionalDmg:float):
 	pass
 
 func get_random_attack():
+	
 	var childCount = attackList.get_child_count()
 	var randomIndex = randi_range(0,childCount-1)
 	
 	var attackMaker:AttackMaker = attackList.get_child(randomIndex)
+	change_health(-attackMaker.healthCost)
 	return attackMaker.create_attack(strength,mindPower)
 
 func get_attack(index):
@@ -75,8 +90,21 @@ func get_attack(index):
 	return attackMaker.create_attack(strength,mindPower)
 
 func change_health(value):
+	
+	#i hate this
+	if value == 0:
+		return
+	
+	if value > 0:
+		hpAnim.play("add")
+	else:
+		hpAnim.play("remove")
+	
 	#remove health
 	health += value
+	
+	HPIndicator.text = str(abs(snappedf(value,0.01)))
+	
 	if health > maxHealth:
 		health = maxHealth
 	

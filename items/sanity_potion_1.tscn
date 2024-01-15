@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpy3ptarsers0"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_haeu3"]
+[ext_resource type="Texture2D" uid="uid://7o02dtfi2clk" path="res://textures/items/sanity potion 1.png" id="2_8h33a"]
+
+[node name="sanity potion 1" instance=ExtResource("1_haeu3")]
+icon = ExtResource("2_8h33a")
+itemName = "beer"
+itemDescription = "not \"strong full\" but it must do"
+manaChange = 5.0
+healthChange = -5.0
+sanityChange = 50.0
+basePrice = 100.0

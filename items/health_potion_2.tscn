@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmrfc3l1uvtc2"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_66c7l"]
+[ext_resource type="Texture2D" uid="uid://dp1r0n0n5k8gg" path="res://textures/items/health potion 2.png" id="2_5ni4q"]
+
+[node name="health potion 2" instance=ExtResource("1_66c7l")]
+icon = ExtResource("2_5ni4q")
+itemName = "orange juice"
+itemDescription = "a powerful weapon aginst some types of aliens"
+manaChange = -5.0
+healthChange = 75.0
+sanityChange = 20.0
+basePrice = 200.0

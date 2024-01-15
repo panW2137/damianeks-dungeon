@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdx18hybgidh"]
+
+[ext_resource type="PackedScene" uid="uid://dkuyw1nernofl" path="res://dungeons/dungeon.tscn" id="1_hii2w"]
+[ext_resource type="PackedScene" uid="uid://dy5s2jrt7nf5j" path="res://monsters/forest/carnivorous_plant.tscn" id="2_phivc"]
+
+[node name="forest_3" instance=ExtResource("1_hii2w")]
+
+[node name="enemy" parent="." index="7" instance=ExtResource("2_phivc")]
+position = Vector2(320, 88)
+
+[connection signal="death" from="enemy" to="." method="_on_enemy_death"]
+[connection signal="got_damaged" from="enemy" to="." method="_on_enemy_got_damaged"]
+[connection signal="setAttackDescription" from="enemy" to="." method="_on_enemy_set_attack_description"]

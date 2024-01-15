@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsfkx63rmijwq"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_pgrub"]
+[ext_resource type="Texture2D" uid="uid://dkbanpordhwcv" path="res://textures/items/sanity potion 2.png" id="2_jil1k"]
+
+[node name="sanity potion 2" instance=ExtResource("1_pgrub")]
+icon = ExtResource("2_jil1k")
+itemName = "vine"
+itemDescription = "smells like sulphur"
+manaChange = 10.0
+healthChange = -5.0
+sanityChange = 100.0
+basePrice = 200.0

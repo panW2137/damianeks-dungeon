@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmpntd1v5tqhw"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_4upbl"]
+[ext_resource type="Texture2D" uid="uid://b6hx1yo1ggft4" path="res://textures/items/sanity potion 3.png" id="2_uuygq"]
+
+[node name="sanity potion 3" instance=ExtResource("1_4upbl")]
+icon = ExtResource("2_uuygq")
+itemName = "expensive vine"
+itemDescription = "does not smell like sulphur"
+manaChange = 15.0
+healthChange = -5.0
+sanityChange = 150.0
+basePrice = 300.0

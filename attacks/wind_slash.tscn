@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dulbhfvdheyc0"]
+[gd_scene load_steps=4 format=3 uid="uid://dulbhfvdheyc0"]
 
 [ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="1_eespo"]
-[ext_resource type="Texture2D" uid="uid://cmdiv118rh87j" path="res://textures/attacks/wind slash.png" id="2_f5s1p"]
+[ext_resource type="Texture2D" uid="uid://cmdiv118rh87j" path="res://textures/attacks/wind_slash_small.png" id="2_k5ljy"]
+[ext_resource type="Texture2D" uid="uid://c2l50r0j6ynay" path="res://textures/attacks/wind_slash_big.png" id="3_1s4ja"]
 
 [node name="wind slash" instance=ExtResource("1_eespo")]
 attackName = "wind slash"
-baseDamage = 10.0
+baseDamage = 20.0
 attackType = 2
 variation = 1.0
-icon = ExtResource("2_f5s1p")
+icon = ExtResource("2_k5ljy")
+bigIcon = ExtResource("3_1s4ja")

@@ -21,7 +21,19 @@ enum itemTypes {
 @export var healthChange:float = 0.0
 @export var sanityChange:float = 0.0
 
+@export var basePrice:float = 0.0
+@export var priceVariation:float = 0.25
+
 @onready var attackItem:AttackMaker
+
+var price = basePrice
+#var price:float = snappedf(basePrice*(1+randf_range(-priceVariation,priceVariation)),0.01)
+
+func _ready():
+	price = snappedf(basePrice*(1+randf_range(-priceVariation,priceVariation)),0.01)
+
+func set_price():
+	price = snappedf(basePrice*(1+randf_range(-priceVariation,priceVariation)),0.01)
 
 func use(player:Player,inventorySlot:int):
 	match itemType:
@@ -30,19 +42,19 @@ func use(player:Player,inventorySlot:int):
 			player.change_mana(manaChange)
 			player.change_sanity(sanityChange)
 			
-			Globals.playerInventory[inventorySlot] = null
+			PlayerData.inventory[inventorySlot] = null
 		itemTypes.ARMOR:
 			player.change_armor(self,inventorySlot)
 		itemTypes.ATTACK:
 			
 			attackItem = get_child(0)
-			var temp = Globals.playerAttacks[Globals.attackSlotToChange]
-			Globals.playerAttacks[Globals.attackSlotToChange] = attackItem
+			var temp = PlayerData.attacks[PlayerData.attackSlotToChange]
+			PlayerData.attacks[PlayerData.attackSlotToChange] = attackItem
 			if(temp != null):
 				get_child(0).replace_by(temp)
 				icon = temp.icon
 			else:
-				Globals.playerInventory[inventorySlot] = null
+				PlayerData.playerInventory[inventorySlot] = null
 			
 
 func get_description(player:Player):
@@ -73,36 +85,10 @@ func get_description(player:Player):
 	return desc
 
 func get_inventory_icon():
-	attackItem = get_child(0)
-	if !attackItem.isSpell: #m-o-r-o-n | d-e-b-i-l | b-a-k-a | i-d-i-o-t-e-s
-		match attackItem.attackType:
-			Globals.type.NORMAL, Globals.type.NONE:
-				return "res://textures/generic attack icons/attack normal.png"
-			Globals.type.FIRE:
-				return "res://textures/generic attack icons/attack fire.png"
-			Globals.type.WATER:
-				return "res://textures/generic attack icons/attack water.png"
-			Globals.type.WIND:
-				return "res://textures/generic attack icons/attack wind.png"
-			Globals.type.EARTH:
-				return "res://textures/generic attack icons/spell earth.png"
-			Globals.type.HOLY:
-				return "res://textures/generic attack icons/attack holy.png"
-			Globals.type.CURSED:
-				return "res://textures/generic attack icons/attack cursed.png"
+	if itemType == itemTypes.ATTACK:
+		attackItem = get_child(0)
+		return attackItem.icon
 	else:
-		match attackItem.attackType:
-			Globals.type.NONE, Globals.type.NONE:
-				return "res://textures/generic attack icons/spell normal.png"
-			Globals.type.FIRE:
-				return "res://textures/generic attack icons/spell fire.png"
-			Globals.type.WATER:
-				return "res://textures/generic attack icons/spell water.png"
-			Globals.type.WIND:
-				return "res://textures/generic attack icons/spell wind.png"
-			Globals.type.EARTH:
-				return "res://textures/generic attack icons/spell earth.png"
-			Globals.type.HOLY:
-				return "res://textures/generic attack icons/spell holy.png"
-			Globals.type.CURSED:
-				return "res://textures/generic attack icons/spell cursed.png"
+		return icon
+	#debil
+	#why did it take me so long to realize that i can just do this

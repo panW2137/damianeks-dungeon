@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://blffn3g3rurq7"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_8gwee"]
+[ext_resource type="Texture2D" uid="uid://ba5c7tgcas6k3" path="res://textures/items/drop chitin armor.png" id="2_h136p"]
+
+[node name="chitin armor" instance=ExtResource("1_8gwee")]
+icon = ExtResource("2_h136p")
+itemType = 1
+itemName = "chitin armor"
+itemDescription = "modular design"
+armorProt = 30.0
+armorType = 3
+manaChange = 0.0
+healthChange = 0.0
+sanityChange = 0.0

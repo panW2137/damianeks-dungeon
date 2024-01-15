@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqpt70pwkcpk2"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_0bj8l"]
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="2_c4qfs"]
+[ext_resource type="Texture2D" uid="uid://bfbjwi4rsqjqt" path="res://textures/attacks/tome_of_madness_small.png" id="3_hwrmp"]
+[ext_resource type="Texture2D" uid="uid://bdpfcg3h7w24i" path="res://textures/attacks/tome_of_madness_big.png" id="4_bc1hq"]
+
+[node name="tome of madness" instance=ExtResource("1_0bj8l")]
+icon = ExtResource("3_hwrmp")
+itemType = 2
+itemName = ""
+manaChange = 0.0
+healthChange = 0.0
+sanityChange = 0.0
+
+[node name="attack maker" parent="." index="0" instance=ExtResource("2_c4qfs")]
+attackName = "tome of madness"
+baseDamage = 40.0
+attackType = 5
+healthCost = 10.0
+manaCost = 30.0
+emotionalCost = 30.0
+variation = 0.4
+icon = ExtResource("3_hwrmp")
+bigIcon = ExtResource("4_bc1hq")
+isSpell = true

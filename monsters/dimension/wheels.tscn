@@ -1,0 +1,81 @@
+[gd_scene load_steps=13 format=3 uid="uid://hb6yelk7jjxo"]
+
+[ext_resource type="PackedScene" uid="uid://n6lwegq8f0ai" path="res://monsters/default_monster.tscn" id="1_012by"]
+[ext_resource type="PackedScene" uid="uid://b3ls3q127aux7" path="res://entities/spinning_thing.tscn" id="2_005tg"]
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="2_m2h7p"]
+[ext_resource type="Texture2D" uid="uid://bhcmmdkkm4ge6" path="res://textures/enemy attacks/be not afraid.png" id="3_av7j5"]
+[ext_resource type="Texture2D" uid="uid://cse1he6kwgyh" path="res://textures/enemy attacks/self heal.png" id="4_dbb1v"]
+[ext_resource type="Texture2D" uid="uid://ckgxj77a367oa" path="res://textures/enemy attacks/sacrifice.png" id="5_yc46n"]
+[ext_resource type="PackedScene" uid="uid://bpf8nyj2o5pcp" path="res://items/mana_potion_1.tscn" id="6_njq4e"]
+[ext_resource type="PackedScene" uid="uid://dtoosy573tv4h" path="res://items/mana_potion_2.tscn" id="7_kfdpp"]
+[ext_resource type="PackedScene" uid="uid://bgu43ba7hjp1g" path="res://items/mana_potion_3.tscn" id="8_wy6cc"]
+[ext_resource type="PackedScene" uid="uid://c2fh3ojouahqx" path="res://items/mana_potion_4.tscn" id="9_duwj4"]
+[ext_resource type="PackedScene" uid="uid://pj2gvrg8ux14" path="res://items/mana_potion_5.tscn" id="10_vruny"]
+[ext_resource type="PackedScene" uid="uid://bjexl2j8un0un" path="res://items/mana_potion_6.tscn" id="11_jl26t"]
+
+[node name="wheels" instance=ExtResource("1_012by")]
+baseMoneyLoot = 300.0
+entityType = 3
+armorType = 4
+entityName = "wheel creature"
+mindPower = 25.0
+strength = 15.0
+maxHealth = 120.0
+armor = 15.0
+
+[node name="bna" parent="attacks" index="0" instance=ExtResource("2_m2h7p")]
+attackName = "be not afraid"
+baseDamage = 10.0
+baseEmotionalDamage = 20.0
+attackType = 5
+healthCost = 5.0
+variation = 0.5
+icon = ExtResource("3_av7j5")
+bigIcon = ExtResource("3_av7j5")
+isSpell = true
+
+[node name="self heal" parent="attacks" index="1" instance=ExtResource("2_m2h7p")]
+attackName = "self heal"
+attackType = 4
+healthCost = -15.0
+icon = ExtResource("4_dbb1v")
+bigIcon = ExtResource("4_dbb1v")
+isSpell = true
+
+[node name="sacrifice" parent="attacks" index="2" instance=ExtResource("2_m2h7p")]
+attackName = "sacrifice"
+baseDamage = 20.0
+attackType = 0
+variation = 0.3
+icon = ExtResource("5_yc46n")
+bigIcon = ExtResource("5_yc46n")
+
+[node name="sprite" parent="." index="1"]
+visible = false
+
+[node name="mana potion 1" parent="loot" index="0" instance=ExtResource("6_njq4e")]
+
+[node name="mana potion 2" parent="loot" index="1" instance=ExtResource("7_kfdpp")]
+
+[node name="mana potion 3" parent="loot" index="2" instance=ExtResource("8_wy6cc")]
+
+[node name="mana potion 4" parent="loot" index="3" instance=ExtResource("9_duwj4")]
+
+[node name="mana potion 5" parent="loot" index="4" instance=ExtResource("10_vruny")]
+
+[node name="mana potion 6" parent="loot" index="5" instance=ExtResource("11_jl26t")]
+
+[node name="spinning thing" parent="." index="10" instance=ExtResource("2_005tg")]
+position = Vector2(-32, -24)
+speed = 2
+
+[node name="spinning thing2" parent="." index="11" instance=ExtResource("2_005tg")]
+position = Vector2(32, -24)
+speed = 2
+
+[node name="spinning thing3" parent="." index="12" instance=ExtResource("2_005tg")]
+position = Vector2(0, -56)
+
+[node name="spinning thing4" parent="." index="13" instance=ExtResource("2_005tg")]
+position = Vector2(0, -24)
+speed = 0

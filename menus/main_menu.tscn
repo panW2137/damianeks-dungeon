@@ -1,0 +1,134 @@
+[gd_scene load_steps=9 format=3 uid="uid://bu1q8405a1s4j"]
+
+[ext_resource type="Texture2D" uid="uid://bg57v6lhp806m" path="res://textures/ui/main menu.png" id="1_1jpqg"]
+[ext_resource type="Script" path="res://menus/main_menu.gd" id="1_n0gho"]
+[ext_resource type="FontFile" uid="uid://de0bxdu4opbio" path="res://globals/PressStart2P-vaV7.ttf" id="2_jssf4"]
+[ext_resource type="Texture2D" uid="uid://cxyp2e5wemydq" path="res://textures/ui/main menu 2.png" id="4_r3nkx"]
+[ext_resource type="PackedScene" uid="uid://0tq7xcajws3p" path="res://ui/save_slot.tscn" id="5_wcydf"]
+
+[sub_resource type="Animation" id="Animation_h4y8r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7xdnp"]
+resource_name = "move camera"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:offset")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(400, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kme16"]
+_data = {
+"RESET": SubResource("Animation_h4y8r"),
+"move camera": SubResource("Animation_7xdnp")
+}
+
+[node name="main menu" type="Node2D"]
+script = ExtResource("1_n0gho")
+
+[node name="MainMenu" type="Sprite2D" parent="."]
+texture = ExtResource("1_1jpqg")
+centered = false
+
+[node name="MainMenu2" type="Sprite2D" parent="."]
+position = Vector2(400, 0)
+texture = ExtResource("4_r3nkx")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 120.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_jssf4")
+theme_override_font_sizes/font_size = 24
+text = "DAMIANS
+DUNGEON"
+
+[node name="play" type="Button" parent="."]
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 112.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("2_jssf4")
+theme_override_font_sizes/font_size = 16
+text = "play"
+
+[node name="return" type="Button" parent="."]
+offset_left = 408.0
+offset_top = 8.0
+offset_right = 520.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("2_jssf4")
+theme_override_font_sizes/font_size = 16
+text = "return"
+
+[node name="exit" type="Button" parent="."]
+offset_left = 8.0
+offset_top = 200.0
+offset_right = 112.0
+offset_bottom = 232.0
+theme_override_fonts/font = ExtResource("2_jssf4")
+theme_override_font_sizes/font_size = 16
+text = "exit"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kme16")
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="save list" type="Node2D" parent="."]
+position = Vector2(400, 0)
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(400, 0, 400, 240)
+width = 1.0
+
+[node name="save slot" parent="." instance=ExtResource("5_wcydf")]
+offset_left = 425.0
+offset_top = 88.0
+offset_right = 525.0
+offset_bottom = 152.0
+saveName = "save 1"
+
+[node name="save slot2" parent="." instance=ExtResource("5_wcydf")]
+offset_left = 550.0
+offset_top = 88.0
+offset_right = 650.0
+offset_bottom = 152.0
+saveName = "save 2"
+
+[node name="save slot3" parent="." instance=ExtResource("5_wcydf")]
+offset_left = 675.0
+offset_top = 88.0
+offset_right = 775.0
+offset_bottom = 152.0
+saveName = "save 3"
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

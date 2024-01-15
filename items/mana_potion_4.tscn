@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2fh3ojouahqx"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_3qh0g"]
+[ext_resource type="Texture2D" uid="uid://diougmflj5mtw" path="res://textures/items/mana potion 4.png" id="2_dd4yd"]
+
+[node name="mana potion 4" instance=ExtResource("1_3qh0g")]
+icon = ExtResource("2_dd4yd")
+itemName = "golden triangle"
+itemDescription = "often depicted on tobrukian sculptures"
+manaChange = 200.0
+healthChange = 20.0
+sanityChange = -5.0
+basePrice = 400.0

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddi7oin1h2c5l"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_xpk22"]
+[ext_resource type="Texture2D" uid="uid://cwxnnilib2u4k" path="res://textures/items/drop mana potion.png" id="2_pl8w5"]
+
+[node name="mana_potion" instance=ExtResource("1_xpk22")]
+icon = ExtResource("2_pl8w5")
+itemName = "mana potion"
+itemDescription = "contains very illegal substances"
+manaChange = 100.0
+healthChange = 0.0
+sanityChange = 0.0

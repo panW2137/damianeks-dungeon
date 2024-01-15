@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp17p1nur5woh"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_rsnby"]
+[ext_resource type="Texture2D" uid="uid://dshjvc2j46ox6" path="res://textures/items/health potion 6.png" id="2_k45ht"]
+
+[node name="health potion 6" instance=ExtResource("1_rsnby")]
+icon = ExtResource("2_k45ht")
+itemName = "box of painkillers"
+itemDescription = "wait... are you going to eat ALL of them?"
+manaChange = -5.0
+healthChange = 250.0
+sanityChange = 35.0
+basePrice = 600.0

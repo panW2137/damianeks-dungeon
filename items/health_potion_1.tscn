@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr03rk8waggak"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_xfkgm"]
+[ext_resource type="Texture2D" uid="uid://cbwqqq05sl2vn" path="res://textures/items/health potion 1.png" id="2_eipog"]
+
+[node name="health potion 1" instance=ExtResource("1_xfkgm")]
+icon = ExtResource("2_eipog")
+itemName = "pizza"
+itemDescription = "does NOT contain pineapples"
+manaChange = -5.0
+healthChange = 50.0
+sanityChange = 10.0
+basePrice = 100.0

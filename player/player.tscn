@@ -1,13 +1,200 @@
-[gd_scene load_steps=4 format=3 uid="uid://cisxy0ycflxkj"]
+[gd_scene load_steps=13 format=3 uid="uid://cisxy0ycflxkj"]
 
 [ext_resource type="PackedScene" uid="uid://gmirbvl8gb7u" path="res://entities/entity.tscn" id="1_qcru3"]
 [ext_resource type="Script" path="res://player/player.gd" id="2_5iwsc"]
+[ext_resource type="Texture2D" uid="uid://32w4npbd0ui1" path="res://textures/timmy the destroyer of worlds.png" id="3_jru3n"]
 [ext_resource type="PackedScene" uid="uid://dnn2fkvf2jfja" path="res://ui/bar.tscn" id="3_yb7iw"]
+
+[sub_resource type="Animation" id="Animation_0ipxx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sanity indicator:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sanity indicator:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kh8fq"]
+resource_name = "add"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sanity indicator:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sanity indicator:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_f8u0m"]
+resource_name = "remove"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sanity indicator:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sanity indicator:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.454902, 0.454902, 0.454902, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k2nsc"]
+_data = {
+"RESET": SubResource("Animation_0ipxx"),
+"add": SubResource("Animation_kh8fq"),
+"remove": SubResource("Animation_f8u0m")
+}
+
+[sub_resource type="Animation" id="Animation_lguwh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../mana indicator:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../mana indicator:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0.207843, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_icybt"]
+resource_name = "add"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../mana indicator:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../mana indicator:modulate")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_52scx"]
+resource_name = "remove"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../mana indicator:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../mana indicator:modulate")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3uf75"]
+_data = {
+"RESET": SubResource("Animation_lguwh"),
+"add": SubResource("Animation_icybt"),
+"remove": SubResource("Animation_52scx")
+}
 
 [node name="player" instance=ExtResource("1_qcru3")]
 script = ExtResource("2_5iwsc")
 maxSanity = 0.0
 maxMana = 0.0
+isPlayer = true
+texture = ExtResource("3_jru3n")
+
+[node name="sprite" parent="." index="1"]
+position = Vector2(-10, -16)
+texture = ExtResource("3_jru3n")
 
 [node name="health bar" parent="." index="2"]
 mode = 1
@@ -27,3 +214,17 @@ offset_right = 32.0
 offset_bottom = 50.0
 color = Color(0.105882, 0.305882, 1, 1)
 mode = 1
+
+[node name="mana indicator" parent="." index="8"]
+modulate = Color(0, 0.207843, 1, 1)
+
+[node name="sanity indicator anim" type="AnimationPlayer" parent="." index="10"]
+libraries = {
+"": SubResource("AnimationLibrary_k2nsc")
+}
+
+[node name="mana indicator anim" type="AnimationPlayer" parent="." index="11"]
+root_node = NodePath("../sanity indicator anim")
+libraries = {
+"": SubResource("AnimationLibrary_3uf75")
+}

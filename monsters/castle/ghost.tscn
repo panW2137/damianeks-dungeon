@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://bk1wmyc4q255l"]
+
+[ext_resource type="PackedScene" uid="uid://n6lwegq8f0ai" path="res://monsters/default_monster.tscn" id="1_2ai06"]
+[ext_resource type="Texture2D" uid="uid://d1pnx3smxerd2" path="res://textures/enemies/ghost.png" id="2_i8fmy"]
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="3_5x6d1"]
+[ext_resource type="Texture2D" uid="uid://tuaybvhevg6i" path="res://textures/enemy attacks/haunt.png" id="4_4fbdv"]
+[ext_resource type="Texture2D" uid="uid://ct7cgu2ohnnl" path="res://textures/enemy attacks/telekinesis.png" id="5_wwpcn"]
+[ext_resource type="PackedScene" uid="uid://bmqn2mxof4pie" path="res://items/ectoplasm.tscn" id="6_rnx55"]
+
+[node name="ghost" instance=ExtResource("1_2ai06")]
+texture = ExtResource("2_i8fmy")
+entityType = 4
+armorType = 5
+entityName = "weak ghost"
+mindPower = 15.0
+strength = 15.0
+
+[node name="haunt" parent="attacks" index="0" instance=ExtResource("3_5x6d1")]
+attackName = "haunt"
+baseDamage = 1.0
+baseEmotionalDamage = 15.0
+attackType = 5
+icon = ExtResource("4_4fbdv")
+bigIcon = ExtResource("4_4fbdv")
+isSpell = true
+
+[node name="telekinesis" parent="attacks" index="1" instance=ExtResource("3_5x6d1")]
+attackName = "telekinetic throw"
+baseDamage = 10.0
+attackType = 6
+variation = 1.0
+icon = ExtResource("5_wwpcn")
+bigIcon = ExtResource("5_wwpcn")
+
+[node name="sprite" parent="." index="1"]
+position = Vector2(-12, -16)
+texture = ExtResource("2_i8fmy")
+
+[node name="ectoplasm" parent="loot" index="0" instance=ExtResource("6_rnx55")]

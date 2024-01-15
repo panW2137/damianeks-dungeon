@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqum6e1oqi6xe"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_7nbs1"]
+[ext_resource type="Texture2D" uid="uid://dlnx24s3jvgkg" path="res://textures/items/sanity potion 4.png" id="2_yc812"]
+
+[node name="sanity potion 4" instance=ExtResource("1_7nbs1")]
+icon = ExtResource("2_yc812")
+itemName = "whisky"
+itemDescription = "the walking John"
+manaChange = 20.0
+healthChange = -5.0
+sanityChange = 200.0
+basePrice = 400.0

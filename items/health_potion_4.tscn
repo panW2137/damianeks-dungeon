@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://blxcb00tlsjk4"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_7hamh"]
+[ext_resource type="Texture2D" uid="uid://3px57hruvoh" path="res://textures/items/health potion 4.png" id="2_fl30h"]
+
+[node name="health potion 4" instance=ExtResource("1_7hamh")]
+icon = ExtResource("2_fl30h")
+itemName = "banana"
+itemDescription = "potassium"
+manaChange = -5.0
+healthChange = 125.0
+sanityChange = 25.0
+basePrice = 400.0

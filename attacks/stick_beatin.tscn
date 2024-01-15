@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfggdm2d7u5mw"]
+[gd_scene load_steps=4 format=3 uid="uid://dfggdm2d7u5mw"]
 
 [ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="1_033hj"]
-[ext_resource type="Texture2D" uid="uid://dsj8ose67k8h1" path="res://textures/attacks/stick beatin'.png" id="2_l6t8s"]
+[ext_resource type="Texture2D" uid="uid://b4e4sjqnxba26" path="res://textures/attacks/sitck_beatin_small.png" id="2_wwjlt"]
+[ext_resource type="Texture2D" uid="uid://bg11nckpll101" path="res://textures/attacks/stick_beatin_big.png" id="3_6xsrk"]
 
 [node name="stick beatin" instance=ExtResource("1_033hj")]
 attackName = "stick beatin'"
-baseDamage = 8.0
+baseDamage = 15.0
 attackType = 6
 variation = 0.5
-icon = ExtResource("2_l6t8s")
+icon = ExtResource("2_wwjlt")
+bigIcon = ExtResource("3_6xsrk")

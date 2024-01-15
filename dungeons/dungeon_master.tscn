@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcyl8attwbua1"]
+
+[ext_resource type="Script" path="res://dungeons/dungeon_master.gd" id="1_1mw67"]
+[ext_resource type="PackedScene" uid="uid://dkuyw1nernofl" path="res://dungeons/dungeon.tscn" id="1_r478q"]
+
+[node name="dungeon master" type="Node2D"]
+script = ExtResource("1_1mw67")
+dungeonList = Array[PackedScene]([ExtResource("1_r478q")])
+bossFight = ExtResource("1_r478q")
+minRoomCount = 5
+maxRoomCount = 10

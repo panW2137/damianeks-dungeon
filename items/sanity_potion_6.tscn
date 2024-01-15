@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfbntyxyewkhu"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_xso1p"]
+[ext_resource type="Texture2D" uid="uid://djchnaxktc0ti" path="res://textures/items/sanity potion 6.png" id="2_jvjl8"]
+
+[node name="sanity potion 6" instance=ExtResource("1_xso1p")]
+icon = ExtResource("2_jvjl8")
+itemName = "normal pills"
+itemDescription = "wake up"
+manaChange = 30.0
+healthChange = -5.0
+sanityChange = 300.0
+basePrice = 600.0

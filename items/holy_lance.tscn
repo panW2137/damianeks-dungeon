@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dw3fut2cjh65n"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_um381"]
+[ext_resource type="PackedScene" uid="uid://cy02m34aggd2r" path="res://attacks/holy_lance.tscn" id="2_dru7x"]
+[ext_resource type="Texture2D" uid="uid://u3mo1m5esbpq" path="res://textures/attacks/holy_lance_small.png" id="3_7rq23"]
+[ext_resource type="Texture2D" uid="uid://dkaa7o2hixtws" path="res://textures/attacks/holy_lance_big.png" id="4_m1xdg"]
+
+[node name="holy lance" instance=ExtResource("1_um381")]
+itemType = 2
+itemName = ""
+basePrice = 120.0
+
+[node name="holy lance" parent="." index="0" instance=ExtResource("2_dru7x")]
+baseDamage = 15.0
+manaCost = 0.0
+emotionalCost = 1.0
+icon = ExtResource("3_7rq23")
+bigIcon = ExtResource("4_m1xdg")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpdkaemuv2lbb"]
+
+[ext_resource type="PackedScene" uid="uid://dkuyw1nernofl" path="res://dungeons/dungeon.tscn" id="1_tjwgj"]
+[ext_resource type="Texture2D" uid="uid://d87i01h0mkr6" path="res://textures/backgrounds/dimension 1.png" id="2_63awy"]
+[ext_resource type="PackedScene" uid="uid://x6plalvnxuox" path="res://monsters/dimension/headless.tscn" id="3_5cv0d"]
+
+[node name="dimension_2" instance=ExtResource("1_tjwgj")]
+
+[node name="bg" parent="." index="0"]
+texture = ExtResource("2_63awy")
+
+[node name="enemy" parent="." index="7" instance=ExtResource("3_5cv0d")]
+position = Vector2(320, 88)
+
+[connection signal="death" from="enemy" to="." method="_on_enemy_death"]
+[connection signal="got_damaged" from="enemy" to="." method="_on_enemy_got_damaged"]
+[connection signal="setAttackDescription" from="enemy" to="." method="_on_enemy_set_attack_description"]

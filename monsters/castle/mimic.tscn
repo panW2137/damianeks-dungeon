@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://bc7ec4nq76017"]
+
+[ext_resource type="PackedScene" uid="uid://n6lwegq8f0ai" path="res://monsters/default_monster.tscn" id="1_gqtij"]
+[ext_resource type="Texture2D" uid="uid://tbcl4n2gqe0i" path="res://textures/enemies/mimic.png" id="2_c0uqg"]
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="3_bx56c"]
+[ext_resource type="Texture2D" uid="uid://bwnw0xuxaih4h" path="res://textures/enemy attacks/greed.png" id="4_clrak"]
+[ext_resource type="Texture2D" uid="uid://q6bd4hxu57qt" path="res://textures/enemy attacks/into the box.png" id="5_44bpq"]
+[ext_resource type="Texture2D" uid="uid://dtu61wr43daha" path="res://textures/enemy attacks/meaty whip.png" id="6_xklnc"]
+
+[node name="mimic" instance=ExtResource("1_gqtij")]
+texture = ExtResource("2_c0uqg")
+entityType = 0
+armorType = 6
+entityName = "mimic"
+mindPower = 10.0
+strength = 10.0
+armor = 15.0
+lootChance = 0
+
+[node name="greed" parent="attacks" index="0" instance=ExtResource("3_bx56c")]
+attackName = "greed"
+baseEmotionalDamage = 18.0
+attackType = 4
+icon = ExtResource("4_clrak")
+bigIcon = ExtResource("4_clrak")
+isSpell = true
+
+[node name="into the box" parent="attacks" index="1" instance=ExtResource("3_bx56c")]
+attackName = "into the box"
+baseDamage = 10.0
+baseEmotionalDamage = 8.0
+attackType = 5
+variation = 0.5
+icon = ExtResource("5_44bpq")
+bigIcon = ExtResource("5_44bpq")
+
+[node name="whip" parent="attacks" index="2" instance=ExtResource("3_bx56c")]
+attackName = "meaty whip"
+baseDamage = 12.0
+attackType = 6
+healthCost = 1.0
+variation = 0.6
+icon = ExtResource("6_xklnc")
+bigIcon = ExtResource("6_xklnc")
+
+[node name="sprite" parent="." index="1"]
+position = Vector2(-11, -24)
+texture = ExtResource("2_c0uqg")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dy6ax4fhfurou"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_bu62h"]
+[ext_resource type="Texture2D" uid="uid://bacnl0xgx4ixb" path="res://textures/items/health potion 3.png" id="2_niodf"]
+
+[node name="health potion 3" instance=ExtResource("1_bu62h")]
+icon = ExtResource("2_niodf")
+itemName = "apple"
+itemDescription = "genetically modified. Does not talk"
+manaChange = -5.0
+healthChange = 100.0
+sanityChange = 20.0
+basePrice = 300.0

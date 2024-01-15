@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://co3dn4bobgeky"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_v4kjh"]
+[ext_resource type="Texture2D" uid="uid://cv22qdalvvn8c" path="res://textures/items/drop slime chunk.png" id="2_g04jo"]
+
+[node name="slime chunk" instance=ExtResource("1_v4kjh")]
+icon = ExtResource("2_g04jo")
+itemName = "slime jelly"
+itemDescription = "lime flavour :D"
+manaChange = 0.0
+healthChange = 15.0
+sanityChange = 10.0

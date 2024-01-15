@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0bf10632g08b"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_3m6nu"]
+[ext_resource type="Texture2D" uid="uid://3gjy66l8o20t" path="res://textures/items/holy armor 2.png" id="2_pqdtf"]
+
+[node name="armor holy 2" instance=ExtResource("1_3m6nu")]
+icon = ExtResource("2_pqdtf")
+itemType = 1
+itemName = "marble shield"
+itemDescription = "what miracle makes it actually useful?"
+armorProt = 30.0
+armorType = 4
+basePrice = 400.0

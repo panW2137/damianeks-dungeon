@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://dv640vysg6wn"]
+
+[ext_resource type="PackedScene" uid="uid://n6lwegq8f0ai" path="res://monsters/default_monster.tscn" id="1_a8hbm"]
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="2_jg8e6"]
+[ext_resource type="Texture2D" uid="uid://b7uememfcwokv" path="res://textures/enemy attacks/vermin swarm.png" id="3_b6h7a"]
+[ext_resource type="Texture2D" uid="uid://ka3eubts174c" path="res://textures/enemy attacks/tongs.png" id="4_ua2nr"]
+[ext_resource type="Texture2D" uid="uid://cu2qr0tyxof78" path="res://textures/enemies/larva.png" id="5_0wyo6"]
+[ext_resource type="PackedScene" uid="uid://blffn3g3rurq7" path="res://items/chitin_armor.tscn" id="6_cbr0u"]
+
+[node name="larva" instance=ExtResource("1_a8hbm")]
+entityType = 3
+armorType = 6
+entityName = "Larva"
+strength = 10.0
+maxHealth = 25.0
+armor = 25.0
+lootChance = 20
+
+[node name="vermin swarm" parent="attacks" index="0" instance=ExtResource("2_jg8e6")]
+attackName = "vermin swarm"
+baseEmotionalDamage = 10.0
+attackType = 6
+icon = ExtResource("3_b6h7a")
+bigIcon = ExtResource("3_b6h7a")
+isSpell = true
+
+[node name="tongs" parent="attacks" index="1" instance=ExtResource("2_jg8e6")]
+attackName = "tongs"
+baseDamage = 10.0
+attackType = 6
+variation = 0.3
+icon = ExtResource("4_ua2nr")
+bigIcon = ExtResource("4_ua2nr")
+
+[node name="sprite" parent="." index="1"]
+position = Vector2(-12, 0)
+texture = ExtResource("5_0wyo6")
+
+[node name="chitin armor" parent="loot" index="0" instance=ExtResource("6_cbr0u")]

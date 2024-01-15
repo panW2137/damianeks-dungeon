@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdylbvsd1n8ac"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_vc8yb"]
+[ext_resource type="Texture2D" uid="uid://cd7v3glkj6smv" path="res://textures/items/health potion 5.png" id="2_bd7ij"]
+
+[node name="health potion 5" instance=ExtResource("1_vc8yb")]
+icon = ExtResource("2_bd7ij")
+itemName = "suspocious meat"
+itemDescription = "don't worry, its actually meat... hopefully"
+manaChange = -5.0
+healthChange = 200.0
+sanityChange = 30.0
+basePrice = 500.0

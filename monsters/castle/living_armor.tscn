@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://cjy47fa0io6cy"]
+
+[ext_resource type="PackedScene" uid="uid://n6lwegq8f0ai" path="res://monsters/default_monster.tscn" id="1_mk1xd"]
+[ext_resource type="Texture2D" uid="uid://sipghn3gfvvg" path="res://textures/enemies/sword knight.png" id="2_3mc0r"]
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="3_1d54j"]
+[ext_resource type="Texture2D" uid="uid://ctfur4g2iqnia" path="res://textures/enemy attacks/sword slash.png" id="4_rapsl"]
+[ext_resource type="Texture2D" uid="uid://dptaxcovisg4d" path="res://textures/enemy attacks/unholy shield.png" id="5_rqbxe"]
+[ext_resource type="Texture2D" uid="uid://br6apgnatop7f" path="res://textures/enemy attacks/holy shield.png" id="6_mt4f8"]
+[ext_resource type="PackedScene" uid="uid://dtq25xndmiaqq" path="res://items/cursed_armor.tscn" id="7_tfxfb"]
+
+[node name="living armor" instance=ExtResource("1_mk1xd")]
+texture = ExtResource("2_3mc0r")
+entityType = 3
+armorType = 6
+entityName = "Armor"
+strength = 20.0
+maxHealth = 120.0
+armor = 25.0
+lootChance = 25
+
+[node name="sword" parent="attacks" index="0" instance=ExtResource("3_1d54j")]
+attackName = "steel sword"
+baseDamage = 17.0
+attackType = 6
+variation = 0.2
+icon = ExtResource("4_rapsl")
+bigIcon = ExtResource("4_rapsl")
+
+[node name="unholy shield" parent="attacks" index="1" instance=ExtResource("3_1d54j")]
+attackName = "unholy shield"
+baseDamage = 5.0
+baseEmotionalDamage = 10.0
+attackType = 5
+healthCost = 5.0
+variation = 0.5
+icon = ExtResource("5_rqbxe")
+bigIcon = ExtResource("5_rqbxe")
+
+[node name="holy shield" parent="attacks" index="2" instance=ExtResource("3_1d54j")]
+attackName = "holy shield"
+baseDamage = 10.0
+baseEmotionalDamage = 5.0
+attackType = 4
+healthCost = -5.0
+variation = 0.5
+icon = ExtResource("6_mt4f8")
+bigIcon = ExtResource("6_mt4f8")
+
+[node name="sprite" parent="." index="1"]
+position = Vector2(-18, -37)
+texture = ExtResource("2_3mc0r")
+
+[node name="cursed armor" parent="loot" index="0" instance=ExtResource("7_tfxfb")]

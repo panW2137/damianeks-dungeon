@@ -1,0 +1,626 @@
+[gd_scene load_steps=37 format=3 uid="uid://cf1wjtpbx8y70"]
+
+[ext_resource type="Script" path="res://menus/shop.gd" id="1_0k336"]
+[ext_resource type="PackedScene" uid="uid://db1yl4x31310m" path="res://ui/ui.tscn" id="1_bd0qw"]
+[ext_resource type="Texture2D" uid="uid://cm054alfu2xk1" path="res://textures/m.wew2.png" id="2_322dn"]
+[ext_resource type="PackedScene" uid="uid://dr03rk8waggak" path="res://items/health_potion_1.tscn" id="2_hgvps"]
+[ext_resource type="FontFile" uid="uid://de0bxdu4opbio" path="res://globals/PressStart2P-vaV7.ttf" id="2_vg25g"]
+[ext_resource type="PackedScene" uid="uid://dmrfc3l1uvtc2" path="res://items/health_potion_2.tscn" id="3_s44ab"]
+[ext_resource type="Texture2D" uid="uid://dv5c62yk5b7hp" path="res://textures/debug texture 3.png" id="4_hsgwm"]
+[ext_resource type="PackedScene" uid="uid://dy6ax4fhfurou" path="res://items/health_potion_3.tscn" id="4_sm3oo"]
+[ext_resource type="PackedScene" uid="uid://bpf8nyj2o5pcp" path="res://items/mana_potion_1.tscn" id="5_ksx10"]
+[ext_resource type="Script" path="res://ui/indexed_button.gd" id="5_v32f5"]
+[ext_resource type="Texture2D" uid="uid://dotclmn7uekp2" path="res://textures/debug texture 2.png" id="6_0mwm6"]
+[ext_resource type="PackedScene" uid="uid://dtoosy573tv4h" path="res://items/mana_potion_2.tscn" id="6_obv47"]
+[ext_resource type="PackedScene" uid="uid://bgu43ba7hjp1g" path="res://items/mana_potion_3.tscn" id="7_4dytg"]
+[ext_resource type="PackedScene" uid="uid://dpy3ptarsers0" path="res://items/sanity_potion_1.tscn" id="8_2ugfr"]
+[ext_resource type="PackedScene" uid="uid://cisxy0ycflxkj" path="res://player/player.tscn" id="8_ihy8u"]
+[ext_resource type="PackedScene" uid="uid://dsfkx63rmijwq" path="res://items/sanity_potion_2.tscn" id="9_5c5dn"]
+[ext_resource type="Texture2D" uid="uid://bcv8f2has8sji" path="res://textures/ui/coin.png" id="9_brmw6"]
+[ext_resource type="PackedScene" uid="uid://cmpntd1v5tqhw" path="res://items/sanity_potion_3.tscn" id="10_0opyt"]
+[ext_resource type="PackedScene" uid="uid://dt4yth0rwf0os" path="res://items/armor_fire_1.tscn" id="11_ii033"]
+[ext_resource type="PackedScene" uid="uid://blxcb00tlsjk4" path="res://items/health_potion_4.tscn" id="11_kmn4n"]
+[ext_resource type="PackedScene" uid="uid://cdylbvsd1n8ac" path="res://items/health_potion_5.tscn" id="12_e0vlo"]
+[ext_resource type="Texture2D" uid="uid://c573x5aftsmsg" path="res://textures/ui/shop panel.png" id="12_mbjlg"]
+[ext_resource type="PackedScene" uid="uid://bwwvjvkypggls" path="res://items/armor_holy_1.tscn" id="12_yxufu"]
+[ext_resource type="PackedScene" uid="uid://c2fh3ojouahqx" path="res://items/mana_potion_4.tscn" id="13_jabkj"]
+[ext_resource type="PackedScene" uid="uid://cw2pn3aof5ksq" path="res://items/armor_water_1.tscn" id="13_njm7p"]
+[ext_resource type="PackedScene" uid="uid://cl7fp443lhg4w" path="res://items/water_splash.tscn" id="14_a7th7"]
+[ext_resource type="PackedScene" uid="uid://pj2gvrg8ux14" path="res://items/mana_potion_5.tscn" id="14_akhh7"]
+[ext_resource type="PackedScene" uid="uid://bqum6e1oqi6xe" path="res://items/sanity_potion_4.tscn" id="15_aivfm"]
+[ext_resource type="PackedScene" uid="uid://doamqe5k1vhrn" path="res://items/sanity_potion_5.tscn" id="16_3uh8q"]
+[ext_resource type="PackedScene" uid="uid://bp17p1nur5woh" path="res://items/health_potion_6.tscn" id="17_folfh"]
+[ext_resource type="PackedScene" uid="uid://bjexl2j8un0un" path="res://items/mana_potion_6.tscn" id="18_72bn3"]
+[ext_resource type="PackedScene" uid="uid://bfbntyxyewkhu" path="res://items/sanity_potion_6.tscn" id="19_47mev"]
+[ext_resource type="PackedScene" uid="uid://d0bf10632g08b" path="res://items/armor_holy_2.tscn" id="20_8ooct"]
+[ext_resource type="PackedScene" uid="uid://mfg7hhwyahiw" path="res://items/blood_sacrifice.tscn" id="22_w5iqa"]
+[ext_resource type="PackedScene" uid="uid://dw3fut2cjh65n" path="res://items/holy_lance.tscn" id="23_cuc0k"]
+[ext_resource type="PackedScene" uid="uid://cvmfs7gu68so6" path="res://items/armor_holy_3.tscn" id="24_w1whl"]
+
+[node name="shop" type="Node2D"]
+script = ExtResource("1_0k336")
+itemsCommon = Array[PackedScene]([ExtResource("2_hgvps"), ExtResource("3_s44ab"), ExtResource("4_sm3oo"), ExtResource("5_ksx10"), ExtResource("6_obv47"), ExtResource("7_4dytg"), ExtResource("8_2ugfr"), ExtResource("9_5c5dn"), ExtResource("10_0opyt"), ExtResource("11_ii033"), ExtResource("12_yxufu"), ExtResource("13_njm7p"), ExtResource("14_a7th7")])
+itemsUncommon = Array[PackedScene]([ExtResource("11_kmn4n"), ExtResource("12_e0vlo"), ExtResource("13_jabkj"), ExtResource("14_akhh7"), ExtResource("15_aivfm"), ExtResource("16_3uh8q"), ExtResource("20_8ooct"), ExtResource("22_w5iqa"), ExtResource("23_cuc0k")])
+itemsRare = Array[PackedScene]([ExtResource("17_folfh"), ExtResource("18_72bn3"), ExtResource("19_47mev"), ExtResource("24_w1whl")])
+
+[node name="ShopPanel" type="Sprite2D" parent="."]
+texture = ExtResource("12_mbjlg")
+centered = false
+
+[node name="shop guy" type="Sprite2D" parent="."]
+position = Vector2(200, 0)
+scale = Vector2(0.2, 0.128)
+texture = ExtResource("2_322dn")
+centered = false
+flip_h = true
+
+[node name="ui" parent="." instance=ExtResource("1_bd0qw")]
+offset_left = 504.0
+offset_top = 232.0
+offset_right = 904.0
+offset_bottom = 328.0
+
+[node name="name" parent="ui/loot window" index="0"]
+layout_mode = 0
+offset_top = 0.0
+offset_bottom = 23.0
+
+[node name="inventory full" parent="ui/loot window" index="1"]
+layout_mode = 0
+offset_top = 0.0
+offset_bottom = 23.0
+
+[node name="loot icon" parent="ui/loot window" index="2"]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="accept loot button" parent="ui/loot window" index="3"]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 16.0
+
+[node name="refuse loot button" parent="ui/loot window" index="4"]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 16.0
+
+[node name="ColorRect2" parent="ui/loot window" index="5"]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 400.0
+offset_bottom = 96.0
+
+[node name="desc" type="Label" parent="."]
+offset_left = 204.0
+offset_top = 132.0
+offset_right = 396.0
+offset_bottom = 269.0
+theme_override_fonts/font = ExtResource("2_vg25g")
+theme_override_font_sizes/font_size = 8
+autowrap_mode = 2
+
+[node name="inventory slots" type="Node2D" parent="."]
+
+[node name="IndexedButon" type="Button" parent="inventory slots"]
+offset_top = 136.0
+offset_right = 24.0
+offset_bottom = 160.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon2" type="Button" parent="inventory slots"]
+offset_left = 24.0
+offset_top = 136.0
+offset_right = 48.0
+offset_bottom = 160.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon3" type="Button" parent="inventory slots"]
+offset_left = 48.0
+offset_top = 136.0
+offset_right = 72.0
+offset_bottom = 160.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon4" type="Button" parent="inventory slots"]
+offset_left = 72.0
+offset_top = 136.0
+offset_right = 96.0
+offset_bottom = 160.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon5" type="Button" parent="inventory slots"]
+offset_left = 96.0
+offset_top = 136.0
+offset_right = 120.0
+offset_bottom = 160.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon6" type="Button" parent="inventory slots"]
+offset_top = 160.0
+offset_right = 24.0
+offset_bottom = 184.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon7" type="Button" parent="inventory slots"]
+offset_left = 24.0
+offset_top = 160.0
+offset_right = 48.0
+offset_bottom = 184.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon8" type="Button" parent="inventory slots"]
+offset_left = 48.0
+offset_top = 160.0
+offset_right = 72.0
+offset_bottom = 184.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon9" type="Button" parent="inventory slots"]
+offset_left = 72.0
+offset_top = 160.0
+offset_right = 96.0
+offset_bottom = 184.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon10" type="Button" parent="inventory slots"]
+offset_left = 96.0
+offset_top = 160.0
+offset_right = 120.0
+offset_bottom = 184.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon11" type="Button" parent="inventory slots"]
+offset_top = 184.0
+offset_right = 24.0
+offset_bottom = 208.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon12" type="Button" parent="inventory slots"]
+offset_left = 24.0
+offset_top = 184.0
+offset_right = 48.0
+offset_bottom = 208.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon13" type="Button" parent="inventory slots"]
+offset_left = 48.0
+offset_top = 184.0
+offset_right = 72.0
+offset_bottom = 208.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon14" type="Button" parent="inventory slots"]
+offset_left = 72.0
+offset_top = 184.0
+offset_right = 96.0
+offset_bottom = 208.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon15" type="Button" parent="inventory slots"]
+offset_left = 96.0
+offset_top = 184.0
+offset_right = 120.0
+offset_bottom = 208.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon16" type="Button" parent="inventory slots"]
+offset_top = 208.0
+offset_right = 24.0
+offset_bottom = 232.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon17" type="Button" parent="inventory slots"]
+offset_left = 24.0
+offset_top = 208.0
+offset_right = 48.0
+offset_bottom = 232.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon18" type="Button" parent="inventory slots"]
+offset_left = 48.0
+offset_top = 208.0
+offset_right = 72.0
+offset_bottom = 232.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon19" type="Button" parent="inventory slots"]
+offset_left = 72.0
+offset_top = 208.0
+offset_right = 96.0
+offset_bottom = 232.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon20" type="Button" parent="inventory slots"]
+offset_left = 96.0
+offset_top = 208.0
+offset_right = 120.0
+offset_bottom = 232.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="armor slot" type="TextureRect" parent="."]
+offset_left = 176.0
+offset_top = 216.0
+offset_right = 192.0
+offset_bottom = 232.0
+texture = ExtResource("4_hsgwm")
+
+[node name="attack slots" type="Node2D" parent="."]
+
+[node name="IndexedButon" type="Button" parent="attack slots"]
+offset_left = 120.0
+offset_top = 128.0
+offset_right = 160.0
+offset_bottom = 168.0
+icon = ExtResource("6_0mwm6")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon2" type="Button" parent="attack slots"]
+offset_left = 160.0
+offset_top = 128.0
+offset_right = 200.0
+offset_bottom = 168.0
+icon = ExtResource("6_0mwm6")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon3" type="Button" parent="attack slots"]
+offset_left = 120.0
+offset_top = 168.0
+offset_right = 160.0
+offset_bottom = 208.0
+icon = ExtResource("6_0mwm6")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon4" type="Button" parent="attack slots"]
+offset_left = 160.0
+offset_top = 168.0
+offset_right = 200.0
+offset_bottom = 208.0
+icon = ExtResource("6_0mwm6")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="shop display" type="Node2D" parent="."]
+
+[node name="IndexedButon" type="Button" parent="shop display"]
+offset_top = 16.0
+offset_right = 24.0
+offset_bottom = 40.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon2" type="Button" parent="shop display"]
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 48.0
+offset_bottom = 40.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon3" type="Button" parent="shop display"]
+offset_left = 48.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 40.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon4" type="Button" parent="shop display"]
+offset_left = 72.0
+offset_top = 16.0
+offset_right = 96.0
+offset_bottom = 40.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon5" type="Button" parent="shop display"]
+offset_left = 96.0
+offset_top = 16.0
+offset_right = 120.0
+offset_bottom = 40.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon6" type="Button" parent="shop display"]
+offset_left = 120.0
+offset_top = 16.0
+offset_right = 144.0
+offset_bottom = 40.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon7" type="Button" parent="shop display"]
+offset_left = 144.0
+offset_top = 16.0
+offset_right = 168.0
+offset_bottom = 40.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon8" type="Button" parent="shop display"]
+offset_left = 168.0
+offset_top = 16.0
+offset_right = 192.0
+offset_bottom = 40.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon9" type="Button" parent="shop display"]
+offset_top = 48.0
+offset_right = 24.0
+offset_bottom = 72.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon10" type="Button" parent="shop display"]
+offset_left = 24.0
+offset_top = 48.0
+offset_right = 48.0
+offset_bottom = 72.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon11" type="Button" parent="shop display"]
+offset_left = 48.0
+offset_top = 48.0
+offset_right = 72.0
+offset_bottom = 72.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon12" type="Button" parent="shop display"]
+offset_left = 72.0
+offset_top = 48.0
+offset_right = 96.0
+offset_bottom = 72.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon13" type="Button" parent="shop display"]
+offset_left = 96.0
+offset_top = 48.0
+offset_right = 120.0
+offset_bottom = 72.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon14" type="Button" parent="shop display"]
+offset_left = 120.0
+offset_top = 48.0
+offset_right = 144.0
+offset_bottom = 72.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon15" type="Button" parent="shop display"]
+offset_left = 144.0
+offset_top = 48.0
+offset_right = 168.0
+offset_bottom = 72.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon16" type="Button" parent="shop display"]
+offset_left = 168.0
+offset_top = 48.0
+offset_right = 192.0
+offset_bottom = 72.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon17" type="Button" parent="shop display"]
+offset_top = 80.0
+offset_right = 24.0
+offset_bottom = 104.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon18" type="Button" parent="shop display"]
+offset_left = 24.0
+offset_top = 80.0
+offset_right = 48.0
+offset_bottom = 104.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon19" type="Button" parent="shop display"]
+offset_left = 48.0
+offset_top = 80.0
+offset_right = 72.0
+offset_bottom = 104.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon20" type="Button" parent="shop display"]
+offset_left = 72.0
+offset_top = 80.0
+offset_right = 96.0
+offset_bottom = 104.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon21" type="Button" parent="shop display"]
+offset_left = 96.0
+offset_top = 80.0
+offset_right = 120.0
+offset_bottom = 104.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon22" type="Button" parent="shop display"]
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 144.0
+offset_bottom = 104.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon23" type="Button" parent="shop display"]
+offset_left = 144.0
+offset_top = 80.0
+offset_right = 168.0
+offset_bottom = 104.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="IndexedButon24" type="Button" parent="shop display"]
+offset_left = 168.0
+offset_top = 80.0
+offset_right = 192.0
+offset_bottom = 104.0
+icon = ExtResource("4_hsgwm")
+flat = true
+script = ExtResource("5_v32f5")
+
+[node name="buy button" type="Button" parent="."]
+offset_left = 208.0
+offset_top = 8.0
+offset_right = 272.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("2_vg25g")
+theme_override_font_sizes/font_size = 8
+text = "BUY"
+
+[node name="sell button" type="Button" parent="."]
+offset_left = 208.0
+offset_top = 32.0
+offset_right = 272.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("2_vg25g")
+theme_override_font_sizes/font_size = 8
+text = "SELL"
+
+[node name="talk button" type="Button" parent="."]
+visible = false
+offset_left = 208.0
+offset_top = 56.0
+offset_right = 272.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_vg25g")
+theme_override_font_sizes/font_size = 8
+text = "TALK"
+
+[node name="exit button" type="Button" parent="."]
+offset_left = 208.0
+offset_top = 104.0
+offset_right = 272.0
+offset_bottom = 120.0
+theme_override_fonts/font = ExtResource("2_vg25g")
+theme_override_font_sizes/font_size = 8
+text = "RETURN"
+
+[node name="player" parent="." instance=ExtResource("8_ihy8u")]
+position = Vector2(-88, -96)
+maxSanity = 5.0
+maxMana = 5.0
+mindPower = 5.0
+strength = 5.0
+maxHealth = 5.0
+armor = 5.0
+dext = 5.0
+lootChance = 5
+
+[node name="sprite" parent="player" index="1"]
+position = Vector2(0, 0)
+centered = true
+
+[node name="money icon" type="TextureRect" parent="."]
+offset_top = 112.0
+offset_right = 16.0
+offset_bottom = 128.0
+texture = ExtResource("9_brmw6")
+
+[node name="money count" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 116.0
+offset_right = 192.0
+offset_bottom = 127.0
+theme_override_fonts/font = ExtResource("2_vg25g")
+theme_override_font_sizes/font_size = 8
+text = "0.0"
+
+[connection signal="mouse_entered" from="armor slot" to="." method="_on_armor_slot_mouse_entered"]
+[connection signal="idx_hover" from="attack slots/IndexedButon" to="." method="_on_attack_icon_idx_hover"]
+[connection signal="idx_hover" from="attack slots/IndexedButon2" to="." method="_on_attack_icon_idx_hover"]
+[connection signal="idx_hover" from="attack slots/IndexedButon3" to="." method="_on_attack_icon_idx_hover"]
+[connection signal="idx_hover" from="attack slots/IndexedButon4" to="." method="_on_attack_icon_idx_hover"]
+[connection signal="pressed" from="buy button" to="." method="_on_buy_button_pressed"]
+[connection signal="pressed" from="sell button" to="." method="_on_sell_button_pressed"]
+[connection signal="pressed" from="talk button" to="." method="_on_talk_button_pressed"]
+[connection signal="pressed" from="exit button" to="." method="_on_exit_button_pressed"]
+
+[editable path="ui"]
+[editable path="player"]

@@ -1,0 +1,364 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpijkiockngd4"]
+
+[ext_resource type="Script" path="res://menus/skill_level.gd" id="1_73cvw"]
+[ext_resource type="FontFile" uid="uid://de0bxdu4opbio" path="res://globals/PressStart2P-vaV7.ttf" id="1_uicne"]
+[ext_resource type="Texture2D" uid="uid://1cb6ldjkck3v" path="res://textures/ui/skill level guy.png" id="2_5oy4t"]
+[ext_resource type="Texture2D" uid="uid://bcv8f2has8sji" path="res://textures/ui/coin.png" id="2_wxxlt"]
+
+[node name="skill level" type="Node2D"]
+script = ExtResource("1_73cvw")
+
+[node name="SkillLevelGuy" type="Sprite2D" parent="."]
+texture = ExtResource("2_5oy4t")
+centered = false
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 256.0
+offset_right = 400.0
+offset_bottom = 48.0
+color = Color(0.717647, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = 256.0
+offset_top = 48.0
+offset_right = 400.0
+offset_bottom = 96.0
+color = Color(0, 0.564706, 1, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+offset_left = 256.0
+offset_top = 96.0
+offset_right = 400.0
+offset_bottom = 144.0
+color = Color(0, 0.788235, 0, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+offset_left = 256.0
+offset_top = 144.0
+offset_right = 400.0
+offset_bottom = 192.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="."]
+offset_left = 256.0
+offset_top = 192.0
+offset_right = 400.0
+offset_bottom = 240.0
+color = Color(0, 0.709804, 0.709804, 1)
+
+[node name="buttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="str button" type="Button" parent="buttons"]
+layout_mode = 0
+offset_left = 256.0
+offset_right = 400.0
+offset_bottom = 48.0
+flat = true
+
+[node name="mag button" type="Button" parent="buttons"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 48.0
+offset_right = 400.0
+offset_bottom = 96.0
+flat = true
+
+[node name="hp button" type="Button" parent="buttons"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 96.0
+offset_right = 400.0
+offset_bottom = 144.0
+flat = true
+
+[node name="san button" type="Button" parent="buttons"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 144.0
+offset_right = 400.0
+offset_bottom = 192.0
+flat = true
+
+[node name="mana button" type="Button" parent="buttons"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 192.0
+offset_right = 400.0
+offset_bottom = 240.0
+flat = true
+
+[node name="labels" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="labels"]
+layout_mode = 0
+offset_left = 256.0
+offset_right = 400.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 8
+text = "strength +20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="labels"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 48.0
+offset_right = 400.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 8
+text = "magic +20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="labels"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 96.0
+offset_right = 400.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 8
+text = "max health +50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="labels"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 144.0
+offset_right = 400.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 8
+text = "max sanity +50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="labels"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 192.0
+offset_right = 400.0
+offset_bottom = 208.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 8
+text = "max mana +50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="displays" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="str disp" type="Label" parent="displays"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 16.0
+offset_right = 400.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 8
+text = "current: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="mag disp" type="Label" parent="displays"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 64.0
+offset_right = 400.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 8
+text = "current: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hp disp" type="Label" parent="displays"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 112.0
+offset_right = 400.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 8
+text = "current: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="san disp" type="Label" parent="displays"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 160.0
+offset_right = 400.0
+offset_bottom = 176.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 8
+text = "current: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="mana disp" type="Label" parent="displays"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 208.0
+offset_right = 400.0
+offset_bottom = 224.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 8
+text = "current: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="prices" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="str price" type="Label" parent="prices"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 32.0
+offset_right = 400.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 8
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="mag price" type="Label" parent="prices"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 80.0
+offset_right = 400.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 8
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hp price" type="Label" parent="prices"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 128.0
+offset_right = 400.0
+offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 8
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="san price" type="Label" parent="prices"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 176.0
+offset_right = 400.0
+offset_bottom = 192.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 8
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="mana price" type="Label" parent="prices"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 224.0
+offset_right = 400.0
+offset_bottom = 240.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 8
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Coin" type="Sprite2D" parent="."]
+position = Vector2(256, 32)
+scale = Vector2(2, 2)
+texture = ExtResource("2_wxxlt")
+centered = false
+
+[node name="Coin2" type="Sprite2D" parent="."]
+position = Vector2(256, 80)
+scale = Vector2(2, 2)
+texture = ExtResource("2_wxxlt")
+centered = false
+
+[node name="Coin3" type="Sprite2D" parent="."]
+position = Vector2(256, 128)
+scale = Vector2(2, 2)
+texture = ExtResource("2_wxxlt")
+centered = false
+
+[node name="Coin4" type="Sprite2D" parent="."]
+position = Vector2(256, 176)
+scale = Vector2(2, 2)
+texture = ExtResource("2_wxxlt")
+centered = false
+
+[node name="Coin5" type="Sprite2D" parent="."]
+position = Vector2(256, 224)
+scale = Vector2(2, 2)
+texture = ExtResource("2_wxxlt")
+centered = false
+
+[node name="Coin6" type="Sprite2D" parent="."]
+position = Vector2(0, 208)
+scale = Vector2(4, 4)
+texture = ExtResource("2_wxxlt")
+centered = false
+
+[node name="money" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 208.0
+offset_right = 256.0
+offset_bottom = 240.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 16
+text = "el dinero"
+vertical_alignment = 1
+
+[node name="no money" type="Label" parent="."]
+visible = false
+offset_top = 184.0
+offset_right = 256.0
+offset_bottom = 208.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 16
+text = "not enough money"
+vertical_alignment = 1
+
+[node name="return button" type="Button" parent="."]
+offset_right = 112.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("1_uicne")
+theme_override_font_sizes/font_size = 16
+text = "return"
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(256, 240, 256, 0, 256, -32, 416, -32, 416, 48, 256, 48, 432, 48, 432, 96, 256, 96, 448, 96, 448, 144, 256, 144, 464, 144, 464, 192, 256, 192, 480, 192, 472, 264, -24, 264, -16, -16, 0, -16, 112, -16, 112, 40, 0, 40)
+width = 1.0
+
+[connection signal="pressed" from="buttons/str button" to="." method="_on_str_button_pressed"]
+[connection signal="pressed" from="buttons/mag button" to="." method="_on_mag_button_pressed"]
+[connection signal="pressed" from="buttons/hp button" to="." method="_on_hp_button_pressed"]
+[connection signal="pressed" from="buttons/san button" to="." method="_on_san_button_pressed"]
+[connection signal="pressed" from="buttons/mana button" to="." method="_on_mana_button_pressed"]
+[connection signal="pressed" from="return button" to="." method="_on_return_button_pressed"]

@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://dgk7o30vs3sfd"]
+
+[ext_resource type="PackedScene" uid="uid://n6lwegq8f0ai" path="res://monsters/default_monster.tscn" id="1_m75i1"]
+[ext_resource type="Texture2D" uid="uid://phodw1trjxh2" path="res://textures/enemies/big_slime.png" id="2_t5wxu"]
+[ext_resource type="Script" path="res://attacks/attack_maker.gd" id="3_6s6ei"]
+[ext_resource type="Texture2D" uid="uid://bpaxhjoj16f6o" path="res://textures/enemy attacks/slime launch.png" id="4_2nody"]
+[ext_resource type="Texture2D" uid="uid://cu15cswhyt313" path="res://textures/enemy attacks/recycle.png" id="5_cot4o"]
+[ext_resource type="Texture2D" uid="uid://cjk1hu646g8h8" path="res://textures/enemy attacks/engulf.png" id="6_f2e7r"]
+[ext_resource type="PackedScene" uid="uid://co3dn4bobgeky" path="res://items/slime_chunk.tscn" id="7_ibruj"]
+
+[node name="big slime" instance=ExtResource("1_m75i1")]
+texture = ExtResource("2_t5wxu")
+entityType = 0
+armorType = 6
+entityName = "big slime"
+mindPower = 5.0
+strength = 5.0
+maxHealth = 75.0
+armor = 3.0
+lootChance = 50
+
+[node name="slime launch" type="Node" parent="attacks" index="0"]
+script = ExtResource("3_6s6ei")
+attackName = "slime launch"
+baseDamage = 10.0
+attackType = 1
+variation = 1.0
+icon = ExtResource("4_2nody")
+bigIcon = ExtResource("4_2nody")
+
+[node name="recycle" type="Node" parent="attacks" index="1"]
+script = ExtResource("3_6s6ei")
+attackName = "recycle"
+baseDamage = 5.0
+attackType = 6
+healthCost = -5.0
+variation = 0.5
+icon = ExtResource("5_cot4o")
+bigIcon = ExtResource("5_cot4o")
+
+[node name="engulf" type="Node" parent="attacks" index="2"]
+script = ExtResource("3_6s6ei")
+attackName = "engulf"
+baseDamage = 10.0
+baseEmotionalDamage = 5.0
+attackType = 1
+icon = ExtResource("6_f2e7r")
+bigIcon = ExtResource("6_f2e7r")
+
+[node name="sprite" parent="." index="1"]
+position = Vector2(-28, -56)
+texture = ExtResource("2_t5wxu")
+
+[node name="slime chunk" parent="loot" index="0" instance=ExtResource("7_ibruj")]

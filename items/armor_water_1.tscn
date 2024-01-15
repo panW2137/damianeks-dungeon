@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw2pn3aof5ksq"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_1alvg"]
+[ext_resource type="Texture2D" uid="uid://lrjdegto88o1" path="res://textures/items/water armor 1.png" id="2_jdqau"]
+
+[node name="armor water 1" instance=ExtResource("1_1alvg")]
+icon = ExtResource("2_jdqau")
+itemType = 1
+itemName = "swimming trunks"
+itemDescription = "protects you from water"
+armorProt = 19.0
+armorType = 1
+basePrice = 200.0

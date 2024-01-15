@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt4yth0rwf0os"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_x8wvx"]
+[ext_resource type="Texture2D" uid="uid://cqffx8a55t7ys" path="res://textures/items/fire armor 1.png" id="2_0eaar"]
+
+[node name="fire armor 1" instance=ExtResource("1_x8wvx")]
+icon = ExtResource("2_0eaar")
+itemType = 1
+itemName = "firefighter suit"
+itemDescription = "a suit used to firefight?"
+armorProt = 25.0
+armorType = 0
+manaChange = 0.0
+healthChange = 0.0
+sanityChange = 0.0
+basePrice = 130.0

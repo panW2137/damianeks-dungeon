@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl7fp443lhg4w"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_fncyg"]
+[ext_resource type="PackedScene" uid="uid://c2ypy34o5iou8" path="res://attacks/water_splash.tscn" id="2_qjngc"]
+
+[node name="water splash" instance=ExtResource("1_fncyg")]
+itemType = 2
+itemName = ""
+basePrice = 100.0
+
+[node name="water splash" parent="." index="0" instance=ExtResource("2_qjngc")]
+manaCost = 8.0
+emotionalCost = 0.0

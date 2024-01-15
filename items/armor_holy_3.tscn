@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvmfs7gu68so6"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_jrmal"]
+[ext_resource type="Texture2D" uid="uid://choyxqw53ufu8" path="res://textures/items/holy armor 3.png" id="2_8m4m6"]
+
+[node name="armor holy 3" instance=ExtResource("1_jrmal")]
+icon = ExtResource("2_8m4m6")
+itemName = "tobrukian coat"
+itemDescription = "marvel of metalurgy, engeneering and magic"
+armorProt = 85.0
+armorType = 4
+basePrice = 10000.0

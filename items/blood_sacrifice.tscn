@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://mfg7hhwyahiw"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_5hwxp"]
+[ext_resource type="PackedScene" uid="uid://xmai6bx861et" path="res://attacks/blood_sacrifice.tscn" id="2_db1ie"]
+
+[node name="blood sacrifice" instance=ExtResource("1_5hwxp")]
+itemType = 2
+itemName = ""
+manaChange = 50.0
+healthChange = 25.0
+sanityChange = -7.0
+basePrice = 150.0
+
+[node name="blood sacrifice" parent="." index="0" instance=ExtResource("2_db1ie")]
+attackName = "blood sacrifice"
+healthCost = 5.0
+manaCost = 35.0
+emotionalCost = 10.0

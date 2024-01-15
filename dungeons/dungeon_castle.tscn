@@ -1,0 +1,15 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhsi4ecjcivup"]
+
+[ext_resource type="PackedScene" uid="uid://dcyl8attwbua1" path="res://dungeons/dungeon_master.tscn" id="1_dq17o"]
+[ext_resource type="PackedScene" uid="uid://bo7oxg0u6trry" path="res://dungeons/castle/castle_1.tscn" id="2_obh0e"]
+[ext_resource type="PackedScene" uid="uid://bwocxwd8f3kxx" path="res://dungeons/castle/castle_2.tscn" id="3_vvwnw"]
+[ext_resource type="PackedScene" uid="uid://e4djp2g3s55i" path="res://dungeons/castle/castle_3.tscn" id="4_n7is6"]
+[ext_resource type="PackedScene" uid="uid://gllpr2fdvff6" path="res://dungeons/castle/castle_4.tscn" id="5_51ijf"]
+[ext_resource type="PackedScene" uid="uid://cy3q1dbuc6kbi" path="res://dungeons/castle/castle_boss.tscn" id="6_y1wwv"]
+
+[node name="dungeon_castle" instance=ExtResource("1_dq17o")]
+dungeonList = Array[PackedScene]([ExtResource("2_obh0e"), ExtResource("3_vvwnw"), ExtResource("4_n7is6"), ExtResource("5_51ijf")])
+bossFight = ExtResource("6_y1wwv")
+minRoomCount = 10
+maxRoomCount = 15
+newMaxLevel = 2

@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://bx85igu8co5lf"]
+
+[ext_resource type="PackedScene" uid="uid://n6lwegq8f0ai" path="res://monsters/default_monster.tscn" id="1_kwewm"]
+[ext_resource type="Texture2D" uid="uid://c1oe14hgb2ptf" path="res://textures/enemies/high necromancer.png" id="2_oqjn8"]
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="3_pybd1"]
+[ext_resource type="Texture2D" uid="uid://dbpy8r7qtwm14" path="res://textures/enemy attacks/good omen.png" id="4_spd3j"]
+[ext_resource type="Texture2D" uid="uid://du3y8jgtwtd45" path="res://textures/enemy attacks/bad omen.png" id="5_wml28"]
+[ext_resource type="Texture2D" uid="uid://owg30orgpli3" path="res://textures/enemy attacks/judgement.png" id="6_tyvw6"]
+[ext_resource type="Texture2D" uid="uid://3cwfulii4k6j" path="res://textures/enemy attacks/red spell.png" id="7_jdnia"]
+[ext_resource type="Texture2D" uid="uid://chu8yjs6dbsb8" path="res://textures/enemy attacks/blue spell.png" id="8_g5l6b"]
+[ext_resource type="Texture2D" uid="uid://cm144v5liddpy" path="res://textures/enemy attacks/under the hood.png" id="9_dg7ny"]
+[ext_resource type="PackedScene" uid="uid://bqpt70pwkcpk2" path="res://items/tome_of_madness.tscn" id="10_b1ges"]
+
+[node name="diffrent one" instance=ExtResource("1_kwewm")]
+baseMoneyLoot = 500.0
+texture = ExtResource("2_oqjn8")
+entityName = "a diffrent one"
+maxHealth = 200.0
+
+[node name="+hp +san" parent="attacks" index="0" instance=ExtResource("3_pybd1")]
+attackName = "good omen"
+baseDamage = -15.0
+baseEmotionalDamage = -15.0
+icon = ExtResource("4_spd3j")
+bigIcon = ExtResource("4_spd3j")
+isSpell = true
+
+[node name="-hp -san" parent="attacks" index="1" instance=ExtResource("3_pybd1")]
+attackName = "bad omen"
+baseDamage = 15.0
+baseEmotionalDamage = 15.0
+icon = ExtResource("5_wml28")
+bigIcon = ExtResource("5_wml28")
+isSpell = true
+
+[node name="judgement" parent="attacks" index="2" instance=ExtResource("3_pybd1")]
+attackName = "judgement"
+baseDamage = 25.0
+healthCost = -20.0
+variation = 1.0
+icon = ExtResource("6_tyvw6")
+bigIcon = ExtResource("6_tyvw6")
+isSpell = true
+
+[node name="+hp - san" parent="attacks" index="3" instance=ExtResource("3_pybd1")]
+attackName = "red spell"
+baseDamage = -15.0
+baseEmotionalDamage = 15.0
+icon = ExtResource("7_jdnia")
+bigIcon = ExtResource("7_jdnia")
+isSpell = true
+
+[node name="-hp +san" parent="attacks" index="4" instance=ExtResource("3_pybd1")]
+attackName = "blue spell"
+baseDamage = 15.0
+baseEmotionalDamage = -15.0
+icon = ExtResource("8_g5l6b")
+bigIcon = ExtResource("8_g5l6b")
+isSpell = true
+
+[node name="attack maker" parent="attacks" index="5" instance=ExtResource("3_pybd1")]
+attackName = "under the hood"
+baseEmotionalDamage = 20.0
+icon = ExtResource("9_dg7ny")
+bigIcon = ExtResource("9_dg7ny")
+isSpell = true
+
+[node name="sprite" parent="." index="1"]
+position = Vector2(-31, -77)
+texture = ExtResource("2_oqjn8")
+
+[node name="tome of madness" parent="loot" index="0" instance=ExtResource("10_b1ges")]

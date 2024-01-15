@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjexl2j8un0un"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_trijm"]
+[ext_resource type="Texture2D" uid="uid://dsud08iohqorg" path="res://textures/items/mana potion 6.png" id="2_1bbvb"]
+
+[node name="mana potion 6" instance=ExtResource("1_trijm")]
+icon = ExtResource("2_1bbvb")
+itemName = "spacecrack"
+itemDescription = "well, guess it DOES allow you to cast spells"
+manaChange = 250.0
+healthChange = 30.0
+sanityChange = -5.0
+basePrice = 600.0

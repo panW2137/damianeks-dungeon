@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://doxsj4plo7nwb"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_m3j58"]
+[ext_resource type="Texture2D" uid="uid://mcqrocx1tv4v" path="res://textures/items/drop circuit.png" id="2_gkn3m"]
+
+[node name="circuit" instance=ExtResource("1_m3j58")]
+icon = ExtResource("2_gkn3m")
+itemName = "ancient circuit"
+itemDescription = "back in the ancient times these golems were quite troublesome"
+manaChange = 20.0
+healthChange = 20.0
+sanityChange = 20.0

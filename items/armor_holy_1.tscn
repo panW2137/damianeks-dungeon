@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwwvjvkypggls"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_bh2fl"]
+[ext_resource type="Texture2D" uid="uid://b5al0reo3hsbd" path="res://textures/items/holy armor 1.png" id="2_rd3x2"]
+
+[node name="armor holy 1" instance=ExtResource("1_bh2fl")]
+icon = ExtResource("2_rd3x2")
+itemType = 1
+itemName = "bronze plate armor"
+itemDescription = "it's very heavy"
+armorProt = 20.0
+armorType = 4
+manaChange = 0.0
+healthChange = 0.0
+sanityChange = 0.0
+basePrice = 90.0

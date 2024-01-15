@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=3 uid="uid://bf800ynot4u5e"]
+
+[ext_resource type="PackedScene" uid="uid://n6lwegq8f0ai" path="res://monsters/default_monster.tscn" id="1_47iwq"]
+[ext_resource type="Texture2D" uid="uid://cl3i0pkp4d362" path="res://textures/enemies/enlightened.png" id="2_v30id"]
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="3_7dxus"]
+[ext_resource type="PackedScene" uid="uid://b3ls3q127aux7" path="res://entities/spinning_thing.tscn" id="3_vd6jr"]
+[ext_resource type="Texture2D" uid="uid://jgv8mukq20sy" path="res://textures/enemy attacks/forbidden teachings.png" id="4_a0md0"]
+[ext_resource type="Texture2D" uid="uid://d2up3s2oticmg" path="res://textures/better wheel.png" id="4_j40ln"]
+[ext_resource type="Texture2D" uid="uid://dcpnb6e4atudv" path="res://textures/enemy attacks/divine flame.png" id="5_jqhwn"]
+[ext_resource type="Texture2D" uid="uid://cq3yyn4midlop" path="res://textures/enemy attacks/gospel.png" id="6_1w35q"]
+[ext_resource type="Texture2D" uid="uid://8hjsw7ah3nm4" path="res://textures/enemy attacks/discipline.png" id="7_7y44q"]
+[ext_resource type="Texture2D" uid="uid://bh0nnimtptdwe" path="res://textures/enemy attacks/astral hierarchy.png" id="8_jeucl"]
+
+[node name="enlightened" instance=ExtResource("1_47iwq")]
+baseMoneyLoot = 1000.0
+texture = ExtResource("2_v30id")
+armorType = 6
+entityName = "enlightened"
+mindPower = 200.0
+strength = 200.0
+maxHealth = 300.0
+armor = 25.0
+lootChance = 0
+
+[node name="punishment" parent="attacks" index="0" instance=ExtResource("3_7dxus")]
+attackName = "punishment"
+baseDamage = 25.0
+baseEmotionalDamage = 25.0
+attackType = 4
+variation = 0.3
+icon = ExtResource("4_a0md0")
+bigIcon = ExtResource("4_a0md0")
+isSpell = true
+
+[node name="flame" parent="attacks" index="1" instance=ExtResource("3_7dxus")]
+attackName = "holy fire"
+baseDamage = 17.0
+baseEmotionalDamage = 10.0
+attackType = 0
+variation = 0.5
+icon = ExtResource("5_jqhwn")
+bigIcon = ExtResource("5_jqhwn")
+isSpell = true
+
+[node name="gospel" parent="attacks" index="2" instance=ExtResource("3_7dxus")]
+attackName = "gospel"
+baseDamage = 10.0
+baseEmotionalDamage = 30.0
+attackType = 4
+healthCost = -10.0
+variation = 0.1
+icon = ExtResource("6_1w35q")
+bigIcon = ExtResource("6_1w35q")
+
+[node name="discipline" parent="attacks" index="3" instance=ExtResource("3_7dxus")]
+attackName = "discipline"
+baseDamage = 20.0
+baseEmotionalDamage = 5.0
+attackType = 4
+variation = 0.6
+icon = ExtResource("7_7y44q")
+bigIcon = ExtResource("7_7y44q")
+
+[node name="hierarchy" parent="attacks" index="4" instance=ExtResource("3_7dxus")]
+attackName = "astral hierarchy"
+baseDamage = 20.0
+baseEmotionalDamage = 10.0
+attackType = 4
+healthCost = -20.0
+variation = 0.4
+icon = ExtResource("8_jeucl")
+bigIcon = ExtResource("8_jeucl")
+
+[node name="sprite" parent="." index="1"]
+position = Vector2(-22, -54)
+texture = ExtResource("2_v30id")
+
+[node name="spinning thing" parent="." index="10" instance=ExtResource("3_vd6jr")]
+position = Vector2(0, -32)
+texture = ExtResource("4_j40ln")
+speed = 2

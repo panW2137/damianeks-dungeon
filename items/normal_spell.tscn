@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmftwfnpdkm6p"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_a746u"]
+[ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="2_5iwe8"]
+[ext_resource type="Texture2D" uid="uid://br6eok78s4qbb" path="res://textures/enemy attacks/normal spell.png" id="3_dcspd"]
+[ext_resource type="Texture2D" uid="uid://cvu5yvfeokgno" path="res://textures/attacks/normal_spell_big.png" id="4_m3njq"]
+
+[node name="normal spell" instance=ExtResource("1_a746u")]
+icon = ExtResource("3_dcspd")
+itemType = 2
+itemName = ""
+
+[node name="attack maker" parent="." index="0" instance=ExtResource("2_5iwe8")]
+baseDamage = 30.0
+attackType = 6
+healthCost = 5.0
+manaCost = 20.0
+emotionalCost = 5.0
+variation = 0.3
+icon = ExtResource("3_dcspd")
+bigIcon = ExtResource("4_m3njq")
+isSpell = true

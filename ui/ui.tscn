@@ -1,31 +1,45 @@
-[gd_scene load_steps=7 format=3 uid="uid://db1yl4x31310m"]
+[gd_scene load_steps=13 format=3 uid="uid://db1yl4x31310m"]
 
 [ext_resource type="Texture2D" uid="uid://c20uphiqcrf18" path="res://textures/debug texture.png" id="1_b7pf4"]
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_gc8ly"]
 [ext_resource type="FontFile" uid="uid://de0bxdu4opbio" path="res://globals/PressStart2P-vaV7.ttf" id="2_wafpq"]
+[ext_resource type="Texture2D" uid="uid://b74t1euddxpde" path="res://textures/ui/ui panel.png" id="2_x5imb"]
 [ext_resource type="Script" path="res://ui/indexed_button.gd" id="4_kwhix"]
 [ext_resource type="Texture2D" uid="uid://dv5c62yk5b7hp" path="res://textures/debug texture 3.png" id="5_b0wsw"]
 [ext_resource type="Texture2D" uid="uid://dotclmn7uekp2" path="res://textures/debug texture 2.png" id="6_ojhbb"]
+[ext_resource type="Texture2D" uid="uid://bcv8f2has8sji" path="res://textures/ui/coin.png" id="7_454cf"]
+[ext_resource type="Texture2D" uid="uid://cnfq6fsg27nou" path="res://textures/ui/loot window.png" id="7_bjayd"]
+[ext_resource type="Texture2D" uid="uid://bmwd5hh8f7uvq" path="res://textures/ui/the doors.png" id="7_cfl0l"]
+[ext_resource type="Texture2D" uid="uid://cscilj4wprngr" path="res://textures/ui/use item window.png" id="9_gpjsx"]
+[ext_resource type="Texture2D" uid="uid://cv7l5rcid065r" path="res://textures/ui/change attack window.png" id="10_wrp5n"]
 
-[node name="ui" type="ColorRect"]
-offset_top = 144.0
+[node name="ui" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 offset_right = 400.0
 offset_bottom = 240.0
-color = Color(0.556863, 0.556863, 0.556863, 1)
+mouse_filter = 2
 script = ExtResource("1_gc8ly")
+
+[node name="UiPanel" type="Sprite2D" parent="."]
+position = Vector2(0, 144)
+texture = ExtResource("2_x5imb")
+centered = false
 
 [node name="desc" type="Label" parent="."]
 layout_mode = 0
 offset_left = 208.0
-offset_top = 8.0
+offset_top = 152.0
 offset_right = 400.0
-offset_bottom = 129.0
+offset_bottom = 273.0
 theme_override_fonts/font = ExtResource("2_wafpq")
 theme_override_font_sizes/font_size = 8
 autowrap_mode = 2
 
 [node name="attacks" type="Control" parent="."]
 anchors_preset = 0
+offset_top = 144.0
+offset_bottom = 144.0
 
 [node name="att1" type="Button" parent="attacks"]
 layout_mode = 0
@@ -73,7 +87,9 @@ index = 3
 [node name="inventory" type="Control" parent="."]
 anchors_preset = 0
 offset_left = 80.0
+offset_top = 144.0
 offset_right = 80.0
+offset_bottom = 144.0
 
 [node name="inv1" type="Button" parent="inventory"]
 layout_mode = 0
@@ -266,19 +282,21 @@ icon = ExtResource("5_b0wsw")
 flat = true
 script = ExtResource("4_kwhix")
 
-[node name="loot window" type="ColorRect" parent="."]
+[node name="loot window" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_left = 152.0
-offset_top = -136.0
-offset_right = 248.0
-offset_bottom = -8.0
-color = Color(0.517647, 0.517647, 0.517647, 1)
+offset_top = 8.0
+offset_right = 246.0
+offset_bottom = 134.0
+texture = ExtResource("7_bjayd")
+expand_mode = 1
+stretch_mode = 2
 
 [node name="name" type="Label" parent="loot window"]
-layout_mode = 0
+offset_top = 2.0
 offset_right = 96.0
-offset_bottom = 23.0
+offset_bottom = 25.0
 theme_override_fonts/font = ExtResource("2_wafpq")
 theme_override_font_sizes/font_size = 16
 text = "LOOT"
@@ -287,7 +305,6 @@ vertical_alignment = 1
 
 [node name="inventory full" type="Label" parent="loot window"]
 visible = false
-layout_mode = 0
 offset_top = 104.0
 offset_right = 96.0
 offset_bottom = 127.0
@@ -300,7 +317,6 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="loot icon" type="TextureRect" parent="loot window"]
-layout_mode = 0
 offset_left = 32.0
 offset_top = 24.0
 offset_right = 64.0
@@ -308,7 +324,6 @@ offset_bottom = 56.0
 texture = ExtResource("6_ojhbb")
 
 [node name="accept loot button" type="Button" parent="loot window"]
-layout_mode = 0
 offset_left = 16.0
 offset_top = 64.0
 offset_right = 80.0
@@ -318,7 +333,6 @@ theme_override_font_sizes/font_size = 8
 text = "accept"
 
 [node name="refuse loot button" type="Button" parent="loot window"]
-layout_mode = 0
 offset_left = 16.0
 offset_top = 88.0
 offset_right = 80.0
@@ -327,13 +341,21 @@ theme_override_fonts/font = ExtResource("2_wafpq")
 theme_override_font_sizes/font_size = 8
 text = "refuse"
 
-[node name="use item window" type="ColorRect" parent="."]
+[node name="ColorRect2" type="ColorRect" parent="loot window"]
+offset_left = -152.0
+offset_top = 136.0
+offset_right = 248.0
+offset_bottom = 232.0
+color = Color(0, 0, 0, 0.435294)
+
+[node name="use item window" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_left = 160.0
-offset_top = -136.0
+offset_top = 8.0
 offset_right = 240.0
-offset_bottom = -24.0
+offset_bottom = 120.0
+texture = ExtResource("9_gpjsx")
 
 [node name="item texture" type="Sprite2D" parent="use item window"]
 position = Vector2(40, 24)
@@ -388,14 +410,14 @@ offset_right = 240.0
 offset_bottom = 232.0
 color = Color(0, 0, 0, 0.435294)
 
-[node name="change attack window" type="ColorRect" parent="."]
+[node name="change attack window" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_left = 144.0
-offset_top = -136.0
+offset_top = 8.0
 offset_right = 256.0
-offset_bottom = -24.0
-color = Color(0.509804, 0.509804, 0.509804, 1)
+offset_bottom = 120.0
+texture = ExtResource("10_wrp5n")
 
 [node name="att 1" type="Sprite2D" parent="change attack window"]
 position = Vector2(39, 23)
@@ -480,10 +502,47 @@ text = "X"
 [node name="ColorRect" type="ColorRect" parent="change attack window"]
 layout_mode = 0
 offset_left = -144.0
-offset_top = 112.0
+offset_top = 136.0
 offset_right = 256.0
 offset_bottom = 232.0
 color = Color(0, 0, 0, 0.509804)
+
+[node name="next level button" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 256.0
+offset_right = 384.0
+offset_bottom = 144.0
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="TheDoors" type="Sprite2D" parent="next level button"]
+position = Vector2(14, 4)
+texture = ExtResource("7_cfl0l")
+centered = false
+
+[node name="coin" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("7_454cf")
+
+[node name="money count" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 391.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.866667, 0, 1)
+theme_override_fonts/font = ExtResource("2_wafpq")
+theme_override_font_sizes/font_size = 8
+text = "0.0"
+
+[node name="money mouse detect" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 400.0
+offset_bottom = 16.0
 
 [connection signal="idx_hover" from="attacks/att1" to="." method="_on_att_idx_hover"]
 [connection signal="idx_pressed" from="attacks/att1" to="." method="_on_att_idx_pressed"]
@@ -505,3 +564,6 @@ color = Color(0, 0, 0, 0.509804)
 [connection signal="idx_pressed" from="change attack window/change att butt 3" to="." method="_on_change_att_butt_idx_pressed"]
 [connection signal="idx_pressed" from="change attack window/change att butt 4" to="." method="_on_change_att_butt_idx_pressed"]
 [connection signal="pressed" from="change attack window/close button" to="." method="_on_close_button_pressed"]
+[connection signal="mouse_entered" from="next level button" to="." method="_on_next_level_button_mouse_entered"]
+[connection signal="pressed" from="next level button" to="." method="_on_next_level_button_pressed"]
+[connection signal="mouse_entered" from="money mouse detect" to="." method="_on_money_mouse_entered"]

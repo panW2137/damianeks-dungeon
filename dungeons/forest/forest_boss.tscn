@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4b7xkxhd8x3"]
+
+[ext_resource type="PackedScene" uid="uid://dkuyw1nernofl" path="res://dungeons/dungeon.tscn" id="1_xve1j"]
+[ext_resource type="PackedScene" uid="uid://ba70ojwbvv0d1" path="res://monsters/forest/leszy.tscn" id="2_na4pw"]
+
+[node name="forest_boss" instance=ExtResource("1_xve1j")]
+
+[node name="Marker2D" parent="." index="6"]
+visible = true
+
+[node name="enemy" parent="." index="7" instance=ExtResource("2_na4pw")]
+position = Vector2(320, 88)
+
+[connection signal="death" from="enemy" to="." method="_on_enemy_death"]
+[connection signal="got_damaged" from="enemy" to="." method="_on_enemy_got_damaged"]
+[connection signal="setAttackDescription" from="enemy" to="." method="_on_enemy_set_attack_description"]

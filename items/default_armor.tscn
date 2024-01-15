@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqodmoto3jvj7"]
+
+[ext_resource type="PackedScene" uid="uid://qrnxe5wc23gd" path="res://items/item.tscn" id="1_a0qjc"]
+[ext_resource type="Texture2D" uid="uid://bbno7qnyrceh7" path="res://textures/items/normal armor 1.png" id="2_nmn2g"]
+
+[node name="default armor" instance=ExtResource("1_a0qjc")]
+icon = ExtResource("2_nmn2g")
+itemType = 1
+itemName = "cheap plate armor"
+itemDescription = "i would't trust it"
+armorProt = 10.0
+armorType = 6
+basePrice = 50.0

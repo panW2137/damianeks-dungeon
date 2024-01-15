@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cu7twap4478tc"]
+[gd_scene load_steps=4 format=3 uid="uid://cu7twap4478tc"]
 
 [ext_resource type="PackedScene" uid="uid://dyeyy4kcrjfw1" path="res://attacks/attack_maker.tscn" id="1_ayxsp"]
-[ext_resource type="Texture2D" uid="uid://dwovgl2m4f4lq" path="res://textures/attacks/fireball.png" id="2_0g3bj"]
+[ext_resource type="Texture2D" uid="uid://dwovgl2m4f4lq" path="res://textures/attacks/fireball_small.png" id="2_i66oe"]
+[ext_resource type="Texture2D" uid="uid://drsutwygf2akn" path="res://textures/attacks/fireball_big.png" id="3_n7oaw"]
 
 [node name="fireball" instance=ExtResource("1_ayxsp")]
 attackName = "fireball"
@@ -9,5 +10,6 @@ baseDamage = 15.0
 attackType = 0
 manaCost = 10.0
 variation = 0.25
-icon = ExtResource("2_0g3bj")
+icon = ExtResource("2_i66oe")
+bigIcon = ExtResource("3_n7oaw")
 isSpell = true
